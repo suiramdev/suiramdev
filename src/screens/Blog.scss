@@ -1,0 +1,108 @@
+.blog {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    padding: 8%;
+}
+
+.blog-edit {
+    position: fixed;
+    top: 0.5rem;
+    right: 0.5rem;
+    overflow: hidden;
+    color: #C2144F !important;
+
+    svg {
+        transform: translateY(-100%);
+        transition: transform 0.1s linear;
+        font-size: 2rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+        
+        svg {
+            transform: translateY(0%);
+        }
+    }
+}
+
+.blog__sections {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 100%;
+    margin-right: 3rem;
+
+    section {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    section h1 {
+        position: relative;
+        padding-bottom: 1rem;
+        margin: 0 0 3rem 0;
+        font-size: 3rem;
+        font-weight: 400;
+        color: #C2144F;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 75px;
+            height: 2px;
+            background-color: #BCBCBC;
+        }
+    }
+
+    section a {
+        display: inline-flex;
+        margin-bottom: 2rem;
+        font-size: 1.2rem;
+        color: #BCBCBC;
+        transition: padding-left 0.15s linear,
+                    color 0.15s linear;
+
+        svg {
+            margin-right: 0.5rem;
+        }
+
+        &:hover,
+        &.active {
+            cursor: pointer;
+            color: #C2144F;
+            padding-left: 2.5rem;
+        }
+    }
+}
+
+.blog__sections-medias {
+    display: inline-flex;
+    margin-top: 3rem;
+    
+    a {
+        margin-right: 2rem;
+        color: #737179;
+        transition: transform 0.1s linear;
+
+        &:hover {
+            transform: scale(0.9);
+        }
+    }
+}
+
+.blog__content {
+    width: 100%;
+    height: fit-content;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.05);
+
+    p {
+        margin: 0;
+        color: #BCBCBC;
+    }
+}
