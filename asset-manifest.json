@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/suiramdev/static/css/main.e9656b30.chunk.css",
+    "main.js": "/suiramdev/static/js/main.43ee4037.chunk.js",
+    "main.js.map": "/suiramdev/static/js/main.43ee4037.chunk.js.map",
+    "runtime-main.js": "/suiramdev/static/js/runtime-main.d5330696.js",
+    "runtime-main.js.map": "/suiramdev/static/js/runtime-main.d5330696.js.map",
+    "static/js/2.a5f1902a.chunk.js": "/suiramdev/static/js/2.a5f1902a.chunk.js",
+    "static/js/2.a5f1902a.chunk.js.map": "/suiramdev/static/js/2.a5f1902a.chunk.js.map",
+    "static/js/3.cc73935d.chunk.js": "/suiramdev/static/js/3.cc73935d.chunk.js",
+    "static/js/3.cc73935d.chunk.js.map": "/suiramdev/static/js/3.cc73935d.chunk.js.map",
+    "index.html": "/suiramdev/index.html",
+    "static/css/main.e9656b30.chunk.css.map": "/suiramdev/static/css/main.e9656b30.chunk.css.map",
+    "static/js/2.a5f1902a.chunk.js.LICENSE.txt": "/suiramdev/static/js/2.a5f1902a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d5330696.js",
+    "static/js/2.a5f1902a.chunk.js",
+    "static/css/main.e9656b30.chunk.css",
+    "static/js/main.43ee4037.chunk.js"
+  ]
+}
