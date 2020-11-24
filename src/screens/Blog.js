@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './Blog.scss';
-import { motion } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
 import CreateIcon from '@material-ui/icons/Create';
 import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 import CodeIcon from '@material-ui/icons/Code';
@@ -35,11 +35,9 @@ export default class Blog extends Component {
                     </div>
                 </div>
                 <div className="blog__content">
-                    <p>Biography
-                    Born in 2002, I 'm passionate in game developement since 4 years… I started developing games on Unity for my own and i'
-                    m now looking to turn this passion into my real Job.I already made some games, websites and mods that you can have a look on my website.
-
-                    My knowledges </p>
+                    <ReactMarkdown>
+                        # Test
+                    </ReactMarkdown>
                 </div>
             </div>
         )

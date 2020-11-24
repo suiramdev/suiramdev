@@ -1,0 +1,36 @@
+.intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background-color: #141321;
+}
+
+.intro__content {
+    width: 27rem;
+
+    h1 {
+        margin: 0;
+        font-family: 'Rubik';
+        font-size: 7rem;
+        color: #C2144F;
+        overflow: hidden;
+    }
+
+    p {
+        margin: 0;
+        font-family: 'Rubik';
+        font-size: 2rem;
+        color: white;
+    }
+
+    div {
+        overflow: hidden;
+    }
+}

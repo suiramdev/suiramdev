@@ -20,7 +20,7 @@
 
     &:hover {
         cursor: pointer;
-        
+
         svg {
             transform: translateY(0%);
         }
@@ -65,7 +65,7 @@
         font-size: 1.2rem;
         color: #BCBCBC;
         transition: padding-left 0.15s linear,
-                    color 0.15s linear;
+            color 0.15s linear;
 
         svg {
             margin-right: 0.5rem;
@@ -83,7 +83,7 @@
 .blog__sections-medias {
     display: inline-flex;
     margin-top: 3rem;
-    
+
     a {
         margin-right: 2rem;
         color: #737179;
@@ -100,9 +100,11 @@
     height: fit-content;
     padding: 1rem;
     background-color: rgba(0, 0, 0, 0.05);
+    color: #BCBCBC;
 
-    p {
-        margin: 0;
-        color: #BCBCBC;
+    h1,
+    h2,
+    h3 {
+        color: #C2144F;
     }
 }
