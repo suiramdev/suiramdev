@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Blog.scss';
 import ReactMarkdown from 'react-markdown';
+import gfm from 'remark-gfm';
+import * as fs from 'fs';
 import CreateIcon from '@material-ui/icons/Create';
 import SportsEsportsIcon from '@material-ui/icons/SportsEsports';
 import CodeIcon from '@material-ui/icons/Code';
@@ -8,7 +10,34 @@ import MenuBookIcon from '@material-ui/icons/MenuBook';
 import { Avatar } from '@material-ui/core';
 import { GitHub, LinkedIn, Twitter, VideogameAsset } from '@material-ui/icons';
 
+class Article {
+    constructor(title, content, year) {
+        this.title = title;
+        this.content = content;
+        this.year = year;
+    }
+}
+
 export default class Blog extends Component {
+    constructor(props) {
+        super(props);
+
+        this.loadArticles = this.loadArticles.bind(this);
+    }
+
+    componentDidMount() {
+        this.loadArticles();
+    }
+
+    loadArticles() {
+        fs.readFile("articles/articles.json", function(err, json) {
+            let data = JSON.parse(json);
+            data.forEach(element => {
+                console.log(element);
+            });
+        });
+    }
+
     render() {
         return (
             <div className="blog">
@@ -19,7 +48,7 @@ export default class Blog extends Component {
                 <div className="blog__sections">
                     <section>
                         <h1>2020</h1>
-                        <a className="active"><SportsEsportsIcon /> My first s&box project</a>
+                        <a><SportsEsportsIcon /> My first s&box project</a>
                         <a><MenuBookIcon /> Watch Dogs Legion review</a>
                         <a><CodeIcon /> ReactJS and Firebase</a>
                         <a><CodeIcon /> Food delivery</a>
@@ -35,9 +64,7 @@ export default class Blog extends Component {
                     </div>
                 </div>
                 <div className="blog__content">
-                    <ReactMarkdown>
-                        # Test
-                    </ReactMarkdown>
+                    <ReactMarkdown plugins={[gfm]} source="" />
                 </div>
             </div>
         )

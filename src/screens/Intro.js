@@ -18,13 +18,8 @@ export default class Intro extends Component {
     }
 
     render() {
-        const variants = {
-            show: { opacity: 1 },
-            hide: { opacity: 0 },
-        }
-
         return (
-            <motion.div animate={this.state.done && {opacity: 0}} transition={{delay: 1.5}} className="intro">
+            <motion.div animate={this.state.done && {opacity: 0, transitionEnd: {display: "none"}}} transition={{delay: 1.5}} className="intro">
                 <div className="intro__content">
                     <motion.h1 initial={{y: 100}} animate={{y: 0}} transition={{delay: 1.5, duration: 1.5}}>HELLO,</motion.h1>
                     <div>
