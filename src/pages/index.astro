@@ -4,9 +4,8 @@ import RSSIcon from "../components/icons/RSSIcon.astro";
 import PostLink from "../components/blog/PostLink.astro";
 import type Post from "../types/post";
 
-const posts: Post[] = await (
-    await fetch(new URL(`/api/blog/all.json`, import.meta.env.SITE))
-).json();
+const query = await fetch(new URL(`/api/blog/all.json`, import.meta.env.SITE));
+const posts: Post[] = query.ok ? await query.json() : [];
 
 // Sort by pubDate in descending order
 posts.sort((a, b) => {
