@@ -1,0 +1,7 @@
+---
+const { ...props } = Astro.props;
+---
+
+<p class="text-zinc-300 text-justify leading-relaxed" {...props}>
+    <slot />
+</p>

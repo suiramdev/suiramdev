@@ -1,0 +1,42 @@
+---
+import TwitterIcon from "./icons/TwitterIcon.astro";
+import LinkedInIcon from "./icons/LinkedInIcon.astro";
+import SquareOutIcon from "./icons/SquareOutIcon.astro";
+---
+
+<nav class="flex justify-between items-center mb-20">
+    <ul class="flex gap-2.5">
+        <li>
+            <a
+                href="https://twitter.com/suiramdev"
+                target="_blank"
+                class="text-zinc-300 hover:text-white"
+                title="Twitter"
+            >
+                <TwitterIcon size={24} />
+            </a>
+        </li>
+        <li>
+            <a
+                href="https://www.linkedin.com/in/suiramdev"
+                target="_blank"
+                class="text-zinc-300 hover:text-white"
+                title="LinkedIn"
+            >
+                <LinkedInIcon size={24} />
+            </a>
+        </li>
+    </ul>
+    <ul>
+        <li>
+            <a
+                href="https://s3.eu-west-3.amazonaws.com/suiram.dev/assets/Resume.pdf"
+                target="_blank"
+                class="btn btn-secondary"
+            >
+                <SquareOutIcon size={12} />
+                My resume
+            </a>
+        </li>
+    </ul>
+</nav>

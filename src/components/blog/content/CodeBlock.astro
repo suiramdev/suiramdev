@@ -1,0 +1,9 @@
+---
+const { lang, code, ...props } = Astro.props;
+---
+
+<pre
+    class="flex flex-col my-4 p-5 overflow-x-auto bg-black rounded-lg"
+    {...props}>
+  <code set:html={code} />
+</pre>

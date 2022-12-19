@@ -1,0 +1,5 @@
+---
+const { code, ...props } = Astro.props;
+---
+
+<code class="px-2 py-1 bg-black rounded-lg" set:html={code} {...props} />

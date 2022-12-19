@@ -1,0 +1,34 @@
+---
+import BaseLayout from "../components/layouts/BaseLayout.astro";
+import RSSIcon from "../components/icons/RSSIcon.astro";
+import PostLink from "../components/blog/PostLink.astro";
+import type Post from "../types/post";
+
+const posts: Post[] = await (
+    await fetch(new URL(`/api/blog/all.json`, import.meta.env.SITE))
+).json();
+
+// Sort by pubDate in descending order
+posts.sort((a, b) => {
+    return (
+        new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+    );
+});
+---
+
+<BaseLayout>
+    <header>
+        <h1 class="mb-5 text-center">Hello, I'm Marius 👋</h1>
+        <p class="mb-16 text-center text-zinc-300">
+            Here, I share my thoughts, reviews, projects, and glimpses of my
+            life.
+        </p>
+    </header>
+    <main class="flex flex-col gap-3.5">
+        <a href="/rss.xml" class="btn btn-primary">
+            <RSSIcon size={12} />
+            Follow
+        </a>
+        {posts.map((post: any) => <PostLink post={post} />)}
+    </main>
+</BaseLayout>

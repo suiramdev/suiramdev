@@ -1,0 +1,78 @@
+---
+import BaseLayout from "../../components/layouts/BaseLayout.astro";
+import { Markdown } from "astro-remote";
+import ArrowLeftIcon from "../../components/icons/ArrowLeftIcon.astro";
+import ArrowUpIcon from "../../components/icons/ArrowUpIcon.astro";
+import Heading from "../../components/blog/content/Heading.astro";
+import CodeBlock from "../../components/blog/content/CodeBlock.astro";
+import CodeSpan from "../../components/blog/content/CodeSpan.astro";
+import Note from "../../components/blog/content/Note.astro";
+import Paragraph from "../../components/blog/content/Paragraph.astro";
+import Embed from "../../components/blog/content/Embed.astro";
+import IFrame from "../../components/blog/content/IFrame.astro";
+import Image from "../../components/blog/content/Image.astro";
+import Video from "../../components/blog/content/Video.astro";
+import type Post from "../../types/post";
+
+let post: Post;
+try {
+    post = await (
+        await fetch(
+            new URL(`/api/blog/${Astro.params.slug}.json`, import.meta.env.SITE)
+        )
+    ).json();
+} catch (error) {
+    return new Response(null, {
+        status: 404,
+    });
+}
+---
+
+<BaseLayout
+    SEO={{
+        title: post.data.title,
+        description: post.data.description,
+        canonicalURL: new URL(
+            `/blog/${post.slug}`,
+            import.meta.env.SITE
+        ).toString(),
+    }}
+>
+    <header class="flex flex-col items-center gap-2 mb-8 text-center" id="top">
+        <h1>{post.data.title}</h1>
+        <span class="text-zinc-500">
+            {new Date(post.data.pubDate).toDateString()}
+        </span>
+    </header>
+    <main>
+        <Markdown
+            content={post.content}
+            components={{
+                Heading,
+                CodeBlock,
+                CodeSpan,
+                Note,
+                blockquote: Note,
+                p: Paragraph,
+                embed: Embed,
+                iframe: IFrame,
+                img: Image,
+                video: Video,
+            }}
+        />
+        <section class="flex justify-between items-center my-4">
+            <a
+                href="/"
+                class="flex items-center gap-2 text-zinc-500 hover:text-white"
+            >
+                <ArrowLeftIcon size={12} /> Back
+            </a>
+            <a
+                href="#top"
+                class="flex items-center gap-2 text-zinc-500 hover:text-white"
+            >
+                <ArrowUpIcon size={12} /> Top
+            </a>
+        </section>
+    </main>
+</BaseLayout>

@@ -1,0 +1,26 @@
+@import "./components/buttons.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+
+    body {
+        @apply min-h-screen bg-zinc-900 bg-gradient-to-b from-[#1D1D20] to-zinc-900 text-white;
+    }
+
+    h1 {
+        @apply text-2xl font-bold;
+    }
+
+    h2 {
+        @apply text-xl font-semibold;
+    }
+
+    p a {
+        @apply text-violet-400 underline;
+    }
+}

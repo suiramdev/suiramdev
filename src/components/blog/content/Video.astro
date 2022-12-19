@@ -1,0 +1,7 @@
+---
+const { ...props } = Astro.props;
+---
+
+<video class="mx-auto my-4" {...props}>
+    <slot />
+</video>

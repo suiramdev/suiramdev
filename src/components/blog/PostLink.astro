@@ -1,0 +1,21 @@
+---
+import type Post from "../../types/post";
+
+interface Props {
+    post: Post;
+}
+
+const { post } = Astro.props;
+---
+
+<a
+    href={`/blog/${post.slug}`}
+    class="flex flex-col gap-1 p-2.5 bg-neutral-800 border border-zinc-700 rounded-lg hover:border-blue-500"
+>
+    <span class="font-semibold">
+        {post.data.title || "New blog"}
+    </span>
+    <span class="text-zinc-500 text-sm">
+        {new Date(post.data.pubDate).toDateString()}
+    </span>
+</a>

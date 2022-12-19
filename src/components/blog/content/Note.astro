@@ -1,0 +1,39 @@
+---
+import InformationIcon from "../../icons/InformationIcon.astro";
+import WarningIcon from "../../icons/WarningIcon.astro";
+import ThumbsDownIcon from "../../icons/ThumbsDownIcon.astro";
+import ThumbsUpIcon from "../../icons/ThumbsUpIcon.astro";
+
+interface Props {
+    type?: "note" | "warning" | "dislike" | "like";
+}
+
+const { type, ...props } = Astro.props;
+---
+
+<blockquote
+    class:list={[
+        "relative flex flex-col my-4 px-5 py-2.5",
+        "text-zinc-300 font-light",
+        "after:content-[''] after:absolute after:top-0 after:left-0 after:w-1.5 after:h-full after:shadow-lg after:bg-blue-500",
+        !type && "bg-zinc-800/50 after:bg-zinc-800",
+        type == "note" && "bg-blue-500/50 after:bg-blue-500",
+        type == "warning" && "bg-amber-500/50 after:bg-amber-500",
+        type == "dislike" && "bg-red-500/50 after:bg-red-500",
+        type == "like" && "bg-green-500/50 after:bg-green-500",
+    ]}
+    {...props}
+>
+    {
+        type && (
+            <label class="flex gap-2 my-1 text-white font-semibold">
+                {type == "note" && <InformationIcon size={24} />}
+                {type == "warning" && <WarningIcon size={24} />}
+                {type == "dislike" && <ThumbsDownIcon size={24} />}
+                {type == "like" && <ThumbsUpIcon size={24} />}
+                {type.toString().toUpperCase()}
+            </label>
+        )
+    }
+    <slot />
+</blockquote>

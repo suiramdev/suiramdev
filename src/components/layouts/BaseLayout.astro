@@ -1,0 +1,39 @@
+---
+import "../../styles/base.css";
+import Navbar from "../Navbar.astro";
+
+interface SEO {
+    title?: string;
+    description?: string;
+    canonicalURL?: string;
+}
+
+interface Props {
+    SEO?: SEO;
+}
+
+const { SEO } = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{SEO?.title ?? "suiramdev's blog"}</title>
+        <meta
+            name="description"
+            content={SEO?.description ??
+                "Here, I share my thoughts, reviews, projects, and glimpses of my life."}
+        />
+        <link
+            rel="canonical"
+            href={SEO?.canonicalURL ?? import.meta.env.SITE}
+        />
+    </head>
+    <body class="px-6 lg:px-56 xl:px-96 py-8">
+        <Navbar />
+        <slot />
+    </body>
+</html>
