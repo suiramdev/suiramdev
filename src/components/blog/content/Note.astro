@@ -14,7 +14,6 @@ const { type, ...props } = Astro.props;
 <blockquote
     class:list={[
         "relative flex flex-col my-8 px-5 py-2.5",
-        "text-gray-400",
         "after:content-[''] after:absolute after:top-0 after:left-0 after:w-1.5 after:h-full after:shadow-lg",
         !type && "bg-gray-800/50 after:bg-gray-800",
         type == "note" && "bg-blue-600/50 after:bg-blue-600",
@@ -26,11 +25,11 @@ const { type, ...props } = Astro.props;
 >
     {
         type && (
-            <label class="flex gap-2 mb-2 text-white font-semibold">
-                {type == "note" && <InformationIcon size={24} />}
-                {type == "warning" && <WarningIcon size={24} />}
-                {type == "dislike" && <ThumbsDownIcon size={24} />}
-                {type == "like" && <ThumbsUpIcon size={24} />}
+            <label class="flex items-center gap-2 mb-2 text-white font-semibold">
+                {type == "note" && <InformationIcon size={12} />}
+                {type == "warning" && <WarningIcon size={12} />}
+                {type == "dislike" && <ThumbsDownIcon size={12} />}
+                {type == "like" && <ThumbsUpIcon size={12} />}
                 {type.toString().toUpperCase()}
             </label>
         )
