@@ -2,4 +2,8 @@
 const { code, ...props } = Astro.props;
 ---
 
-<code class="px-2 py-1 bg-black rounded-lg" set:html={code} {...props} />
+<code
+    class="px-2 py-1 border border-gray-700 border-dashed rounded-lg whitespace-pre-wrap"
+    {...props}
+    set:html={code}
+/>

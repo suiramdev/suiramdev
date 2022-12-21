@@ -1,21 +1,21 @@
 @layer components {
     .btn {
-        @apply w-fit flex gap-2.5 justify-center items-center px-2.5 py-1;
+        @apply w-fit flex gap-2.5 justify-center items-center px-2.5 py-1 rounded-lg font-medium transition-colors;
     }
 
     .btn-primary {
-        @apply bg-blue-500 transition-colors text-black rounded-full;
+        @apply bg-blue-600 text-white border border-transparent hover:bg-transparent hover:border-blue-600 hover:text-blue-600;
     }
 
     .btn-secondary {
-        @apply bg-none text-zinc-300 border border-zinc-300 rounded-full hover:text-white hover:border-white;
+        @apply bg-white border border-transparent text-black hover:bg-transparent hover:border-white hover:text-white;
     }
 
     .btn-action {
-        @apply bg-none text-zinc-500 rounded-lg hover:text-white hover:bg-white/10;
+        @apply bg-gray-900 text-white rounded-lg hover:bg-gray-800;
     }
 
     .btn-action.active {
-        @apply !bg-white/10 !text-blue-500;
+        @apply !bg-blue-600;
     }
 }

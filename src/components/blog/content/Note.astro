@@ -13,20 +13,20 @@ const { type, ...props } = Astro.props;
 
 <blockquote
     class:list={[
-        "relative flex flex-col my-4 px-5 py-2.5",
-        "text-zinc-300 font-light",
-        "after:content-[''] after:absolute after:top-0 after:left-0 after:w-1.5 after:h-full after:shadow-lg after:bg-blue-500",
-        !type && "bg-zinc-800/50 after:bg-zinc-800",
-        type == "note" && "bg-blue-500/50 after:bg-blue-500",
-        type == "warning" && "bg-amber-500/50 after:bg-amber-500",
-        type == "dislike" && "bg-red-500/50 after:bg-red-500",
-        type == "like" && "bg-green-500/50 after:bg-green-500",
+        "relative flex flex-col my-8 px-5 py-2.5",
+        "text-gray-400",
+        "after:content-[''] after:absolute after:top-0 after:left-0 after:w-1.5 after:h-full after:shadow-lg",
+        !type && "bg-gray-800/50 after:bg-gray-800",
+        type == "note" && "bg-blue-600/50 after:bg-blue-600",
+        type == "warning" && "bg-amber-600/50 after:bg-amber-600",
+        type == "dislike" && "bg-red-600/50 after:bg-red-600",
+        type == "like" && "bg-green-600/50 after:bg-green-600",
     ]}
     {...props}
 >
     {
         type && (
-            <label class="flex gap-2 my-1 text-white font-semibold">
+            <label class="flex gap-2 mb-2 text-white font-semibold">
                 {type == "note" && <InformationIcon size={24} />}
                 {type == "warning" && <WarningIcon size={24} />}
                 {type == "dislike" && <ThumbsDownIcon size={24} />}

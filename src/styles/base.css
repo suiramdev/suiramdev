@@ -9,18 +9,22 @@
     }
 
     body {
-        @apply min-h-screen bg-zinc-900 bg-gradient-to-b from-[#1D1D20] to-zinc-900 text-white;
+        @apply min-h-screen bg-black text-gray-300;
     }
 
     h1 {
-        @apply text-2xl font-bold;
+        @apply text-white text-3xl font-bold;
     }
 
     h2 {
-        @apply text-xl font-semibold;
+        @apply text-white text-2xl font-semibold;
+    }
+    
+    h3 {
+        @apply text-gray-400 text-xl font-semibold;
     }
 
     p a {
-        @apply text-violet-400 underline;
+        @apply underline decoration-dotted underline-offset-4;
     }
 }
