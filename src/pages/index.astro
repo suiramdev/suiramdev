@@ -17,7 +17,7 @@ posts.sort((a, b) => {
 ---
 
 <BaseLayout>
-    <section class="nest">
+    <section class="nest mb-8">
         <div class="mb-16 flex flex-col gap-8 text-center">
             <h1>Hello, I'm Marius 👋</h1>
             <span class="text-center text-gray-400">
@@ -33,7 +33,7 @@ posts.sort((a, b) => {
             {posts.map((post: any) => <PostLink post={post} />)}
         </div>
     </section>
-    <section class="relative mt-10 py-20 bg-grid-pattern">
+    <section class="relative mt-10 py-10 bg-grid-pattern">
         <div class="nest flex flex-col items-center gap-8 text-center">
             <h1>Bringing your vision to life</h1>
             <span class="text-gray-400">

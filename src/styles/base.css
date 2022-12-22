@@ -5,7 +5,7 @@
 
 @layer base {
     html, body {
-        @apply m-0 w-full h-full bg-black text-gray-300 scroll-smooth;
+        @apply m-0 w-full min-h-full bg-black text-gray-300 scroll-smooth;
     }
 
     h1 {
