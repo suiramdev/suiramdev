@@ -13,7 +13,7 @@ const { type, ...props } = Astro.props;
 
 <blockquote
     class:list={[
-        "relative flex flex-col my-8 px-5 py-2.5",
+        "relative flex flex-col my-4 px-5 py-2.5",
         "after:content-[''] after:absolute after:top-0 after:left-0 after:w-1.5 after:h-full after:shadow-lg",
         !type && "bg-gray-800/50 after:bg-gray-800",
         type == "note" && "bg-blue-600/50 after:bg-blue-600",
