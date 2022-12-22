@@ -4,12 +4,8 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        @apply scroll-smooth;
-    }
-
-    body {
-        @apply min-h-screen bg-black text-gray-300;
+    html, body {
+        @apply m-0 w-full h-full bg-black text-gray-300;
     }
 
     h1 {

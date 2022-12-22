@@ -2,16 +2,22 @@
 const { lang, code, ...props } = Astro.props;
 ---
 
+<head>
+    <link href="/prism/default.css" rel="stylesheet" />
+    <link href="/prism/theme.css" rel="stylesheet" />
+</head>
+<script src="/prism/default.js" is:inline></script>
 <div
     class="relative my-4 p-5 border border-gray-700 border-dashed rounded-lg"
     {...props}
 >
     <label
         class="absolute top-0 left-5 -translate-y-1/2 rounded-full px-1.5 shadow-[0_0_1px_3px_black] bg-gray-800 text-xs uppercase text-gray-300"
-        >{lang}</label
     >
+        {lang}
+    </label>
     <pre
-        class="overflow-x-scroll">
-        <code class="whitespace-pre-wrap" set:html={code} />
+        class="flex overflow-x-scroll">
+        <code class:list={`lang-${lang}`} set:html={code} />
     </pre>
 </div>
