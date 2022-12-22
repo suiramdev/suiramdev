@@ -3,6 +3,7 @@ import BaseLayout from "../components/layouts/BaseLayout.astro";
 import RSSIcon from "../components/icons/RSSIcon.astro";
 import PostLink from "../components/blog/PostLink.astro";
 import type Post from "../types/post";
+import SquareOutIcon from "../components/icons/SquareOutIcon.astro";
 
 const query = await fetch(new URL(`/api/blog/all.json`, import.meta.env.SITE));
 const posts: Post[] = query.ok ? await query.json() : [];
@@ -16,18 +17,33 @@ posts.sort((a, b) => {
 ---
 
 <BaseLayout>
-    <header>
-        <h1 class="mb-5 text-center">Hello, I'm Marius 👋</h1>
-        <p class="mb-16 text-center text-gray-400">
-            Here, I share my thoughts, reviews, projects, and glimpses of my
-            life.
-        </p>
-    </header>
-    <main class="flex flex-col gap-3.5">
-        <a href="/rss.xml" class="btn btn-primary">
-            <RSSIcon size={12} />
-            Follow
-        </a>
-        {posts.map((post: any) => <PostLink post={post} />)}
-    </main>
+    <section class="nest">
+        <div class="mb-16 flex flex-col gap-8 text-center">
+            <h1>Hello, I'm Marius 👋</h1>
+            <span class="text-center text-gray-400">
+                Here, I share my thoughts, reviews, projects, and glimpses of my
+                life.
+            </span>
+        </div>
+        <div class="flex flex-col gap-3.5">
+            <a href="/rss.xml" class="btn btn-primary">
+                <RSSIcon size={12} />
+                Follow
+            </a>
+            {posts.map((post: any) => <PostLink post={post} />)}
+        </div>
+    </section>
+    <section class="relative mt-10 py-20 bg-grid-pattern">
+        <div class="nest flex flex-col items-center gap-8 text-center">
+            <h1>Bringing your vision to life</h1>
+            <span class="text-gray-400">
+                I specialise in turning your ideas into reality through custom
+                website and application development services.
+            </span>
+            <a href="mailto:contact@suiram.dev" class="btn btn-primary">
+                <SquareOutIcon size={12} />
+                Contact me
+            </a>
+        </div>
+    </section>
 </BaseLayout>

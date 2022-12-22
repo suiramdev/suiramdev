@@ -38,13 +38,16 @@ try {
         ).toString(),
     }}
 >
-    <header class="flex flex-col items-center gap-2 mb-8 text-center" id="top">
+    <header
+        class="nest flex flex-col items-center gap-2 mb-8 text-center"
+        id="top"
+    >
         <h1>{post.data.title}</h1>
         <span class="text-zinc-500">
             {new Date(post.data.pubDate).toDateString()}
         </span>
     </header>
-    <main>
+    <main class="nest">
         <Markdown
             content={post.content}
             components={{
