@@ -21,6 +21,11 @@ export async function get({ params }: any) {
         if (post.data.length <= 0 || post.data.draft)
             return;
 
+        if (post.data.pubDate) {
+            post.data.pubDate = new Date(post.data.pubDate)
+                .toLocaleDateString('en-US', { year: "numeric", month: "long", day: "2-digit" });
+        }
+
         const data: Post = {
             slug: params.slug,
             content: post.content,

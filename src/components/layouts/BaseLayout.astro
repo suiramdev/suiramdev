@@ -8,11 +8,30 @@ interface SEO {
     canonicalURL?: string;
 }
 
-interface Props {
-    SEO?: SEO;
+interface Article {
+    published_time?: string;
+    author?: string;
 }
 
-const { SEO } = Astro.props;
+interface OG {
+    title?: string;
+    type?: string;
+    url?: string;
+    image?: string;
+    article?: Article;
+}
+
+interface Props {
+    SEO?: SEO;
+    OG?: OG;
+}
+
+const { SEO, OG } = Astro.props;
+
+// Default OG image URL
+const OGimage = new URL("/api/og.png", import.meta.env.SITE);
+OGimage.searchParams.set("title", "suiramdev's blog");
+OGimage.searchParams.set("description", "suiramdev's blog");
 ---
 
 <html lang="en">
@@ -34,6 +53,15 @@ const { SEO } = Astro.props;
             rel="canonical"
             href={SEO?.canonicalURL ?? import.meta.env.SITE}
         />
+        <meta property="og:title" content={OG?.title ?? "suiramdev's blog"} />
+        <meta property="og:type" content={OG?.type ?? "website"} />
+        <meta property="og:url" content={OG?.url ?? import.meta.env.SITE} />
+        <meta
+            property="article:published_time"
+            content={OG?.article?.published_time}
+        />
+        <meta property="article:author" content={OG?.article?.author} />
+        <meta property="og:image" content={OG?.image ?? OGimage} />
     </head>
     <body class="pt-8">
         <Navbar />
