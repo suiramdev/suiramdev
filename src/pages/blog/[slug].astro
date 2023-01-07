@@ -45,6 +45,7 @@ try {
     }}
     OG={{
         title: post.data.title,
+        description: post.data.description,
         type: "article",
         url: new URL(`/blog/${post.slug}`, import.meta.env.SITE).toString(),
         image: OGimage.toString(),

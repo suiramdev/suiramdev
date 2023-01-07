@@ -15,6 +15,7 @@ interface Article {
 
 interface OG {
     title?: string;
+    description?: string;
     type?: string;
     url?: string;
     image?: string;
@@ -53,7 +54,8 @@ OGimage.searchParams.set("description", "suiramdev's blog");
             rel="canonical"
             href={SEO?.canonicalURL ?? import.meta.env.SITE}
         />
-        <meta property="og:title" content={OG?.title ?? "suiramdev's blog"} />
+        <meta property="og:title" content={OG?.title} />
+        <meta property="og:description" content={OG?.description} />
         <meta property="og:type" content={OG?.type ?? "website"} />
         <meta property="og:url" content={OG?.url ?? import.meta.env.SITE} />
         <meta
