@@ -6,7 +6,6 @@ specifiers:
   '@astrojs/vercel': ^2.3.6
   '@aws-sdk/client-s3': ^3.226.0
   '@resvg/resvg-js': ^2.2.0
-  '@resvg/resvg-js-linux-x64-gnu': ^2.2.0
   astro: ^1.6.13
   astro-remote: ^0.2.3
   gray-matter: ^4.0.3
@@ -20,7 +19,6 @@ dependencies:
   '@astrojs/vercel': 2.3.6
   '@aws-sdk/client-s3': 3.226.0
   '@resvg/resvg-js': 2.2.0
-  '@resvg/resvg-js-linux-x64-gnu': 2.2.0
   astro: 1.6.13
   astro-remote: 0.2.3
   gray-matter: 4.0.3
@@ -1561,6 +1559,7 @@ packages:
     os: [linux]
     requiresBuild: true
     dev: false
+    optional: true
 
   /@resvg/resvg-js-linux-x64-musl/2.2.0:
     resolution: {integrity: sha512-7n2d4gfcyLb06RE/7aMGwiiMiqeCf/Ze/fBhKs9F2L60GX6rpgDC2PGJmWBiXIwz48PifvxmBiqD9XCUH5YGoA==}
