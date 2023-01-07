@@ -63,12 +63,8 @@ export async function get({ request }: any) {
     });
     const image = resvgJS.render();
 
-    console.log(image.asPng());
-
     return {
-        headers: {
-            'Content-Type': 'image/png',
-        },
         body: image.asPng(),
+        encoding: "binary",
     };
 }
