@@ -22,7 +22,7 @@ export async function get({ request }: any) {
         `),
             {
                 width: 1200,
-                height: 630,
+                height: 600,
                 fonts: [
                     {
                         name: 'Inter',
