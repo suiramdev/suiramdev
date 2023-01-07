@@ -1,13 +1,17 @@
 {
-  "headers": [
-    {
-      "source": "/api/og.png",
-      "headers" : [
+    "headers": [
         {
-          "key" : "Cache-Control",
-          "value" : "public, max-age=31536000, immutable"
+          "source": "/api/og.png",
+          "headers": [
+                {
+                    "key": "Content-Type",
+                    "value": "image/png;charset=utf-8"
+                },
+                {
+                    "key": "Cache-Control",
+                    "value": "public, max-age=31536000, immutable"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
