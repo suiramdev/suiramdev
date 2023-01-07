@@ -64,6 +64,10 @@ export async function get({ request }: any) {
     const image = resvgJS.render();
 
     return {
+        headers: {
+            'Content-Type': 'image/png',
+            'Cache-Control': 'public, max-age=31536000, immutable'
+        },
         body: image.asPng(),
         encoding: "binary",
     };
