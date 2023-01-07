@@ -55,6 +55,8 @@ export async function get({ request }: any) {
         },
     );
 
+    console.log(svg);
+
     const resvgJS = new Resvg(svg, {
         fitTo: {
             mode: 'width',
