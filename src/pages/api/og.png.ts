@@ -1,7 +1,9 @@
 import satori from "satori";
 import { html } from "satori-html";
-import { Resvg } from "@resvg/resvg-js";
+import resvgWasm from "@resvg/resvg-wasm";
 import { loadEmoji, getIconCode } from "../../libs/twemoji";
+
+await resvgWasm.initWasm(fetch('https://unpkg.com/@resvg/resvg-wasm/index_bg.wasm'));
 
 export async function get({ request }: any) {
     const params = new URL(request.url).searchParams;
@@ -53,14 +55,13 @@ export async function get({ request }: any) {
         },
     );
 
-    const resvg = new Resvg(svg, {
+    const resvgJS = new resvgWasm.Resvg(svg, {
         fitTo: {
             mode: 'width',
             value: 1200,
         },
     });
-
-    const image = resvg.render();
+    const image = resvgJS.render();
 
     return {
         headers: {
