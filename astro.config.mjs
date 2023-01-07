@@ -9,7 +9,7 @@ import vercel from "@astrojs/vercel/serverless";
 // https://astro.build/config
 export default defineConfig({
     output: "server",
-    site: "http://localhost:3000",
+    site: "https://suiram.dev",
     integrations: [tailwind()],
     adapter: vercel(),
 });
