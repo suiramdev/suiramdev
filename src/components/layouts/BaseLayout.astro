@@ -31,8 +31,8 @@ const { SEO, OG } = Astro.props;
 
 // Default OG image URL
 const OGimage = new URL("/api/og.png", import.meta.env.SITE);
-OGimage.searchParams.set("title", "suiramdev's blog");
-OGimage.searchParams.set("description", "suiramdev's blog");
+OGimage.searchParams.append("title", "suiramdev's blog");
+OGimage.searchParams.append("description", "suiramdev's blog");
 ---
 
 <html lang="en">

@@ -24,9 +24,9 @@ try {
     ).json();
 
     // OG image URL
-    OGimage.searchParams.set("icon", post.data.prefix);
-    OGimage.searchParams.set("title", post.data.title);
-    OGimage.searchParams.set("description", post.data.pubDate);
+    OGimage.searchParams.append("icon", post.data.prefix);
+    OGimage.searchParams.append("title", post.data.title);
+    OGimage.searchParams.append("description", post.data.pubDate);
 } catch (error) {
     return new Response(null, {
         status: 404,

@@ -49,10 +49,8 @@ export async function get({ request }: any) {
                 loadAdditionalAsset: async (code: string, segment: string) => {
                     if (code === "emoji") {
                         return "data:image/svg+xml;base64," +
-                            btoa(await loadEmoji("fluent", getIconCode(segment)))
+                            btoa(await loadEmoji("noto", getIconCode(segment)))
                     }
-
-                    return (code);
                 },
             },
         );
