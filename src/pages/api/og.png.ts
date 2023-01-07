@@ -67,6 +67,6 @@ export async function get({ request }: any) {
         headers: {
             'Content-Type': 'image/png',
         },
-        body: new Blob([image.asPng()], { type: 'image/png' }),
+        body: image.asPng(),
     };
 }
