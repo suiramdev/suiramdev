@@ -55,8 +55,6 @@ export async function get({ request }: any) {
         },
     );
 
-    console.log(svg);
-
     const resvgJS = new Resvg(svg, {
         fitTo: {
             mode: 'width',
@@ -64,6 +62,8 @@ export async function get({ request }: any) {
         },
     });
     const image = resvgJS.render();
+
+    console.log(image.asPng());
 
     return {
         headers: {
