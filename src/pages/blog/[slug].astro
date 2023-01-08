@@ -15,7 +15,7 @@ import Video from "../../components/blog/content/Video.astro";
 import type Post from "../../types/post";
 
 let post: Post;
-const OGimage = new URL("/api/og.png", import.meta.env.SITE);
+const image = new URL("/api/og.png", import.meta.env.SITE);
 try {
     post = await (
         await fetch(
@@ -24,9 +24,9 @@ try {
     ).json();
 
     // OG image URL
-    OGimage.searchParams.append("icon", post.data.prefix);
-    OGimage.searchParams.append("title", post.data.title);
-    OGimage.searchParams.append("description", post.data.pubDate);
+    image.searchParams.append("icon", post.data.prefix);
+    image.searchParams.append("title", post.data.title);
+    image.searchParams.append("description", post.data.pubDate);
 } catch (error) {
     return new Response(null, {
         status: 404,
@@ -38,17 +38,8 @@ try {
     SEO={{
         title: post.data.title,
         description: post.data.description,
-        canonicalURL: new URL(
-            `/blog/${post.slug}`,
-            import.meta.env.SITE
-        ).toString(),
-    }}
-    OG={{
-        title: post.data.title,
-        description: post.data.description,
-        type: "article",
-        url: new URL(`/blog/${post.slug}`, import.meta.env.SITE).toString(),
-        image: OGimage.toString(),
+        canonicalURL: new URL(`/blog/${post.slug}`, import.meta.env.SITE),
+        image: image,
         article: {
             published_time: post.data.pubDate,
             author: "suiramdev",
