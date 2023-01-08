@@ -13,7 +13,7 @@ export async function get({ request }: any) {
         const svg = await satori(
             html(`
             <div tw="w-full h-full flex bg-black">
-                <div style="font-family: 'Inter'; background-image: linear-gradient(to bottom, rgba(0, 0, 0 , 0.8), transparent, transparent), url(${new URL("grid.svg", import.meta.env.SITE)});" tw="w-full h-full px-24 flex flex-col justify-center items-center text-center">
+                <div style="font-family: 'Inter'; background-image: linear-gradient(to bottom, rgba(0, 0, 0 , 0.8), transparent, transparent, transparent), url(${new URL("grid.svg", import.meta.env.SITE)});" tw="w-full h-full px-24 flex flex-col justify-center items-center text-center">
                    <span class="text-9xl">${params.get("icon") || ""}</span>
                    <span class="my-10 text-white text-5xl font-bold">${params.get("title") || ""}</span>
                    <span class="text-3xl text-zinc-500">${params.get("description") || ""}</span>

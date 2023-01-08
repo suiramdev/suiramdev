@@ -4,7 +4,7 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                'grid-pattern': 'linear-gradient(to bottom, rgba(0, 0, 0 , 0.8), transparent, transparent), url(/grid.svg)',
+                'grid-pattern': 'linear-gradient(to bottom, rgba(0, 0, 0 , 0.8), transparent, transparent, transparent), url(/grid.svg)',
             },
         },
     },
