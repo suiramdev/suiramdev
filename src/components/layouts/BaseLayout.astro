@@ -22,17 +22,17 @@ interface Props {
 const { SEO } = Astro.props;
 
 // Default OG image URL
-let image = SEO?.image;
-if (!image) {
-    image = new URL("/api/og.png", import.meta.env.SITE);
-    image.searchParams.append("title", "suiramdev's blog");
-    image.searchParams.append("description", "suiramdev's blog");
-}
 const title = SEO?.title ?? "suiramdev's blog";
 const description =
     SEO?.description ??
     "Here, I share my thoughts, reviews, projects, and glimpses of my life.";
 const canonicalURL = SEO?.canonicalURL ?? import.meta.env.SITE;
+let image = SEO?.image;
+if (!image) {
+    image = new URL("/api/og.png", import.meta.env.SITE);
+    image.searchParams.append("title", title);
+    image.searchParams.append("description", description);
+}
 ---
 
 <html lang="en">
