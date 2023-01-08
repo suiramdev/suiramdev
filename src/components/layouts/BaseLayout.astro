@@ -3,7 +3,7 @@ import "../../styles/base.css";
 import Navbar from "../Navbar.astro";
 
 interface Article {
-    published_time?: string;
+    publishedTime?: string;
     author?: string;
 }
 
@@ -55,8 +55,12 @@ if (!image) {
         />
         <meta property="og:url" content={canonicalURL} />
         <meta
+            property="og:published_date"
+            content={SEO?.article?.publishedTime}
+        />
+        <meta
             property="article:published_time"
-            content={SEO?.article?.published_time}
+            content={SEO?.article?.publishedTime}
         />
         <meta property="article:author" content={SEO?.article?.author} />
         <meta property="og:image" content={image} />

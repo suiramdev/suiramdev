@@ -41,7 +41,7 @@ try {
         canonicalURL: new URL(`/blog/${post.slug}`, import.meta.env.SITE),
         image: image,
         article: {
-            published_time: post.data.pubDate,
+            publishedTime: new Date(post.data.pubDate).toISOString(),
             author: "suiramdev",
         },
     }}
