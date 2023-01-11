@@ -12,6 +12,7 @@ import Embed from "../../components/blog/content/Embed.astro";
 import IFrame from "../../components/blog/content/IFrame.astro";
 import Image from "../../components/blog/content/Image.astro";
 import Video from "../../components/blog/content/Video.astro";
+import List from "../../components/blog/content/List.astro";
 import type Post from "../../types/post";
 
 let post: Post;
@@ -68,6 +69,7 @@ try {
                 iframe: IFrame,
                 img: Image,
                 video: Video,
+                ul: List,
             }}
         />
         <section class="flex justify-between items-center my-4">
