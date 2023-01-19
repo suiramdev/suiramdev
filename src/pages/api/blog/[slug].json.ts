@@ -19,7 +19,10 @@ export async function get({ params }: any) {
         const post = matter(await object.Body!.transformToString());
 
         if (post.data.length <= 0 || post.data.draft)
-            return;
+            return new Response(null, {
+                status: 400,
+                statusText: "The requested blog post has no data or is a draft."
+            });
 
         if (post.data.pubDate) {
             post.data.pubDate = new Date(post.data.pubDate)

@@ -9,15 +9,15 @@ export async function get() {
             StartAfter: "content/",
         }));
 
-        const data: Post[] = list.Contents ?
-            await Promise.all(list.Contents.map(async (content) => {
+        const data: Post[] = [];
+        if (list.Contents)
+            for (const content of list.Contents) {
                 const slug = content.Key?.split("/")?.pop()?.split(".")[0];
 
                 const post = await fetch(new URL(`/api/blog/${slug}.json`, import.meta.env.SITE));
-                if (!post.ok) return;
-
-                return await post.json();
-            })) : [];
+                if (post.ok)
+                    data.push(await post.json());
+            }
 
         return new Response(JSON.stringify(data, null, '\t'), {
             status: 200,
