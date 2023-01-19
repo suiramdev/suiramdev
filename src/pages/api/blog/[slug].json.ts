@@ -10,7 +10,7 @@ export async function get({ params }: any) {
             Key: `content/${params.slug}.mdx`
         }));
 
-        if (!object)
+        if (!object || !object.Body)
             return new Response(null, {
                 status: 404,
                 statusText: "Not found"
@@ -20,7 +20,7 @@ export async function get({ params }: any) {
 
         if (post.data.length <= 0 || post.data.draft)
             return new Response(null, {
-                status: 400,
+                status: 403,
                 statusText: "The requested blog post has no data or is a draft."
             });
 
