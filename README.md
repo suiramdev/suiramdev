@@ -12,8 +12,8 @@ After taking the pre-registration exam for <a href="https://42.fr"><img src="htt
     <a href="https://mydemenageur.com">➤ mydemenageur.com</a><br/>
     <a href="https://github.com/feldrise/feldrise-site">➤ feldrise/feldrise-site</a><br/>
     <a href="https://github.com/suiramdev/gabi-margot">➤ suiramdev/gabi-margot</a><br/>
-    <a href="https://github.com/suiramdev/copsandrunners">➤ suiramdev/copsandrunners</a><br/>
-    <a href="https://github.com/suiramdev/nft-market">➤ suiramdev/nft-market</a><br/>
+    <a href="https://github.com/suiramdev/suiramdev">➤ suiramdev/suiramdev</a><br/>
     <a href="https://github.com/suiramdev/whatsApp-clone">➤ suiramdev/whatsApp-clone</a><br/>
+    <a href="https://github.com/suiramdev/42-fdf">➤ suiramdev/42-fdf</a><br/>
     <a href="https://github.com/stars/suiramdev/lists/my-incredible-projects">(...)</a>
 </ul>
