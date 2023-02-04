@@ -1,0 +1,31 @@
+@import "./components/buttons.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body {
+    @apply flex flex-col m-0 w-full min-h-screen bg-black text-gray-300 scroll-smooth;
+  }
+
+  h1 {
+    @apply text-white text-3xl font-bold;
+  }
+
+  h2 {
+    @apply text-white text-2xl font-semibold;
+  }
+
+  h3 {
+    @apply text-gray-400 text-xl font-semibold;
+  }
+
+  p a {
+    @apply underline decoration-dotted underline-offset-4;
+  }
+
+  .nest {
+    @apply px-6 lg:px-56 xl:px-96;
+  }
+}

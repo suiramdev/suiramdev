@@ -1,0 +1,21 @@
+@layer components {
+    .btn {
+        @apply w-fit flex gap-2.5 justify-center items-center px-2.5 py-1 rounded-lg font-medium transition-colors;
+    }
+
+    .btn-primary {
+        @apply bg-blue-600 text-white border border-transparent hover:bg-transparent hover:border-blue-600 hover:text-blue-600;
+    }
+
+    .btn-secondary {
+        @apply bg-white border border-transparent text-black hover:bg-transparent hover:border-white hover:text-white;
+    }
+
+    .btn-action {
+        @apply bg-gray-900 text-white rounded-lg hover:bg-gray-800;
+    }
+
+    .btn-action.active {
+        @apply !bg-blue-600;
+    }
+}

@@ -1,38 +1,19 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<h1><img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/waving-hand_1f44b.png" width=32/> Hi, I'm Marius</h1>
+<p>Back in 2013, I discovered a passion for programming. I started to develop what I'm most passionate about video games, and then I developed my own websites and software that you can find here.
+<br>Now, I want to make my passion my real job.</p>
+<img src="https://komarev.com/ghpvc/?username=suiramdev&label=Profile%20views&color=0e75b6&style=flat" alt="suiramdev"/>
+<h2><img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/bus_1f68c.png" width=18/> Goals</h2>
+After taking the pre-registration exam for <a href="https://42.fr"><img src="https://42.fr/wp-content/uploads/2021/05/42-Final-sigle-seul.svg" width=16 /> school</a> in Paris, I was recently accepted 🥳!
+<br/>In the future, I would like to move from France, and live from a remote job.
+<br/><br/>
+<a href="https://github.com/JaeSeoKim/badge42"><img src="https://badge42.vercel.app/api/v2/cl896pgrj00110gjwbccn2we0/stats?cursusId=21&coalitionId=48" alt="mnouchet's 42 stats" /></a>
+<h2><img src="https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/fire_1f525.png" width=18/> Featured Projects</h2>
+<ul>
+    <a href="https://mydemenageur.com">➤ mydemenageur.com</a><br/>
+    <a href="https://github.com/feldrise/feldrise-site">➤ feldrise/feldrise-site</a><br/>
+    <a href="https://github.com/suiramdev/gabi-margot">➤ suiramdev/gabi-margot</a><br/>
+    <a href="https://github.com/suiramdev/suiramdev">➤ suiramdev/suiramdev</a><br/>
+    <a href="https://github.com/suiramdev/whatsApp-clone">➤ suiramdev/whatsApp-clone</a><br/>
+    <a href="https://github.com/suiramdev/42-fdf">➤ suiramdev/42-fdf</a><br/>
+    <a href="https://github.com/stars/suiramdev/lists/my-incredible-projects">(...)</a>
+</ul>

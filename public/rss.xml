@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[suiramdev's blog]]></title>
+        <description><![CDATA[Here, I share my thoughts, reviews, projects, and glimpses of my life.]]></description>
+        <link>http://github.com/dylang/node-rss</link>
+        <generator>RSS for Node</generator>
+        <lastBuildDate>Sat, 04 Feb 2023 02:35:43 GMT</lastBuildDate>
+        <atom:link href="undefined/rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Sat, 04 Feb 2023 02:35:43 GMT</pubDate>
+        <copyright><![CDATA[© 2023 suiramdev]]></copyright>
+        <language><![CDATA[en]]></language>
+        <managingEditor><![CDATA[suiramdev]]></managingEditor>
+        <webMaster><![CDATA[suiramdev]]></webMaster>
+        <item>
+            <title><![CDATA[🎓 The Answer to Life, the Universe, and the 42 School Pre-Registration Exam]]></title>
+            <description><![CDATA[Learn about my journey to passing the notoriously difficult pre-registration exam at 42 School, and how I was ultimately accepted into this prestigious institution. Discover the strategies and mindset that helped me succeed, and find out what the "Answer to Life, the Universe, and Everything" really means in the context of the exam.]]></description>
+            <link>undefined/blog/42-school-pre-registration-exam-success-story-paris</link>
+            <guid isPermaLink="true">undefined/blog/42-school-pre-registration-exam-success-story-paris</guid>
+            <pubDate>Sat, 17 Sep 2022 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[🤖 Exploring the Potential of ChatGPT and AI, A Look into the Future]]></title>
+            <description><![CDATA[In this blog post, we dive into the world of ChatGPT and AI, discussing their capabilities and potential impact on our future. From natural language processing to automating mundane tasks, the possibilities are endless. Join us as we explore the exciting future of ChatGPT and AI.]]></description>
+            <link>undefined/blog/chatgpt-ai-future-potential</link>
+            <guid isPermaLink="true">undefined/blog/chatgpt-ai-future-potential</guid>
+            <pubDate>Wed, 18 Jan 2023 23:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[🔍 Dissecting a Visual Basic Malware, a Hands-On Approach to Reverse Engineering]]></title>
+            <description><![CDATA[Are you interested in learning about reverse engineering and malware analysis? In this blog post, we take a hands-on approach to dissecting a Visual Basic malware that was found on a client's computer. Follow along as we walk through the steps of reverse engineering and explore the inner workings of this malicious software. By the end of this post, you'll have a better understanding of how to reverse engineer Visual Basic malware and how to defend against it. This post is perfect for cybersecurity enthusiasts and professionals looking to expand their knowledge of malware analysis.]]></description>
+            <link>undefined/blog/dissecting-visual-basic-malware-hands-on-reverse-engineering</link>
+            <guid isPermaLink="true">undefined/blog/dissecting-visual-basic-malware-hands-on-reverse-engineering</guid>
+            <pubDate>Wed, 05 Jan 2022 23:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[📦 Getting Started with Modding in S&box (Garry's Mod 2), A Beginner's Guide - Part 1]]></title>
+            <description><![CDATA[Learn how to mod S&box (Garry's Mod 2) with this beginner's guide. In this first part, you'll learn how to set up your development environment, understand the game structure, and create a basic gamemode with walking player movements and basic UI. Perfect for those new to modding and looking to customize their gaming experience]]></description>
+            <link>undefined/blog/getting-started-modding-sbox-garrys-mod-2-beginners-guide-part-1</link>
+            <guid isPermaLink="true">undefined/blog/getting-started-modding-sbox-garrys-mod-2-beginners-guide-part-1</guid>
+            <pubDate>Thu, 12 Jan 2023 23:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[🧑🏼‍💻 My Internship Experience at Feldrise]]></title>
+            <description><![CDATA[Are you interested in pursuing a career in full-stack mobile and web development? In this blog post, I share my experience interning at Feldrise, a company that provides full-stack development services to other businesses. I discuss the projects I worked on and the challenges I faced, providing insight into what it's really like to intern in the tech industry. Whether you're a student looking to gain hands-on experience in full-stack development or a professional considering a new opportunity, this post is a must-read. Get an inside look at my internship experience at Feldrise and see what it takes to succeed in the world of full-stack mobile and web development for clients.]]></description>
+            <link>undefined/blog/intership-at-feldrise</link>
+            <guid isPermaLink="true">undefined/blog/intership-at-feldrise</guid>
+            <pubDate>Thu, 07 Apr 2022 22:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[🤖 Boost Your Productivity with GitHub Copilot]]></title>
+            <description><![CDATA[Are you looking to boost your productivity as a developer? In this blog post, we introduce GitHub Copilot, a new tool that helps you navigate and work with large codebases more efficiently. We share our thoughts on the benefits of using GitHub Copilot and provide a brief overview of its features. Whether you're a beginner or an experienced developer, this post is a must-read if you want to streamline your workflow and get more done in less time. Learn how GitHub Copilot can help you save time and improve your productivity as a developer.]]></description>
+            <link>undefined/blog/review-github-copilot-productivity-tool</link>
+            <guid isPermaLink="true">undefined/blog/review-github-copilot-productivity-tool</guid>
+            <pubDate>Sun, 31 Oct 2021 23:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[🔮 Understanding Web3, the Future of the Internet]]></title>
+            <description><![CDATA[Are you curious about the future of the internet? In this blog post, we explore the concept of web3, also known as the blockchain or decentralized internet. We provide a beginner-friendly overview of web3 and explain how it differs from the traditional web we use today. Whether you're new to the world of blockchain technology or just want to learn more about the potential of web3, this post is a great starting point. Get a better understanding of web3 and see how it could shape the future of the internet.]]></description>
+            <link>undefined/blog/understanding-web3-the-future-of-the-internet</link>
+            <guid isPermaLink="true">undefined/blog/understanding-web3-the-future-of-the-internet</guid>
+            <pubDate>Sat, 07 Jan 2023 23:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
