@@ -135,7 +135,7 @@
 
 <script setup lang="ts">
 import type { QueryBuilderParams } from "@nuxt/content/dist/runtime/types";
-import { track } from "@vercel/analytics";
+const { gtag } = useGtag();
 
 const projectsQuery: QueryBuilderParams = {
   path: "/projects",
@@ -163,6 +163,8 @@ const downloadCV = () => {
   link.click();
   document.body.removeChild(link);
 
-  track("Download CV");
+  gtag("event", "download", {
+    event_label: "CV",
+  });
 };
 </script>

@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     "@nuxthq/studio",
     "nuxt-marquee",
     "@hypernym/nuxt-gsap",
+    "nuxt-gtag",
   ],
   components: [
     {
