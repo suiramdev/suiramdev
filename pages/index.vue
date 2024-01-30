@@ -122,7 +122,7 @@
           </template>
         </ContentList>
       </div>
-      <AppButton variant="secondary" class="mx-auto" to="/projects"
+      <AppButton variant="secondary" class="mx-auto" to="/blog"
         >See more</AppButton
       >
     </section>
