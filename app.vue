@@ -22,7 +22,7 @@ useSeoMeta({
   description,
   ogTitle: title,
   ogDescription: description,
-  ogUrl: useRuntimeConfig().public.BASE_URL + route.fullPath,
+  ogUrl: useRuntimeConfig().public.baseURL + route.fullPath,
   twitterTitle: title,
   twitterDescription: description,
   twitterCard: "summary",

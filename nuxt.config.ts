@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   runtimeConfig: {
     public: {
-      BASE_URL: process.env.BASE_URL || "https://localhost:3000",
+      baseURL: "https://suiram.dev",
     },
   },
   css: ["~/assets/styles/main.css"],

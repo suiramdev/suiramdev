@@ -78,7 +78,7 @@ useSeoMeta({
   description: page.value?.description,
   ogTitle: page.value?.title,
   ogDescription: page.value?.description,
-  ogUrl: useRuntimeConfig().public.BASE_URL + route.fullPath,
+  ogUrl: useRuntimeConfig().public.baseURL + route.fullPath,
   ogImage: page.value?.image?.src || page.value?.image,
   ogImageAlt: page.value?.image?.alt,
   twitterTitle: page.value?.title,
