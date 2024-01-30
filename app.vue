@@ -18,6 +18,8 @@ const description =
 const route = useRoute();
 
 useSeoMeta({
+  title,
+  description,
   ogTitle: title,
   ogDescription: description,
   ogUrl: useRuntimeConfig().public.BASE_URL + route.fullPath,
@@ -27,7 +29,7 @@ useSeoMeta({
 });
 
 useHead({
-  title,
+  titleTemplate: "%s - suiramdev",
   htmlAttrs: {
     lang: "en",
   },

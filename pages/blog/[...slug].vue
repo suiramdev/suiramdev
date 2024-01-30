@@ -74,6 +74,8 @@ const { data: page } = await useAsyncData(
 );
 
 useSeoMeta({
+  title: page.value?.title,
+  description: page.value?.description,
   ogTitle: page.value?.title,
   ogDescription: page.value?.description,
   ogUrl: useRuntimeConfig().public.BASE_URL + route.fullPath,
