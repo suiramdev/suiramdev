@@ -4,7 +4,7 @@
       <aside
         class="sticky left-0 top-0 float-left -mt-12 hidden h-fit w-60 pr-12 pt-12 md:block"
       >
-        <AppButton variant="secondary" to="/blog" class="mb-6">
+        <AppButton variant="secondary" to="/blog" class="mb-12">
           <Icon name="ph:arrow-arc-left-bold" />
           Back
         </AppButton>
