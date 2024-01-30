@@ -1,5 +1,9 @@
 <template>
-  <NuxtLink :to="props.to" class="flex flex-col gap-2">
+  <NuxtLink
+    :to="props.to"
+    class="flex flex-col gap-2"
+    :target="props.to && isExternal(props.to) ? '_blank' : undefined"
+  >
     <div
       class="relative aspect-video w-full overflow-hidden rounded-3xl border border-white/5 bg-white/5 after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-white after:opacity-0 after:transition-opacity after:content-[''] hover:after:opacity-5"
     >
@@ -43,6 +47,8 @@ const props = withDefaults(defineProps<Props>(), {
   name: "Project name",
   tag: undefined,
   src: undefined,
-  to: "",
+  to: undefined,
 });
+
+const isExternal = (url: string) => url.startsWith("http");
 </script>
