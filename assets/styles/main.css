@@ -1,0 +1,21 @@
+@font-face {
+  font-family: "Geist Variable";
+  src: url("/fonts/GeistVariableVF.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gochi Hand";
+  src: url("/fonts/GochiHand-Regular.woff") format("woff");
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-neutral-900 text-neutral-100;
+}
+
+p {
+  @apply text-neutral-300;
+}

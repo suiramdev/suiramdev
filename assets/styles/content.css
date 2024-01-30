@@ -1,0 +1,38 @@
+.content h1 {
+  @apply mb-6 mt-12 text-2xl font-bold;
+}
+
+.content h2 {
+  @apply mb-4 text-xl font-semibold;
+}
+
+.content h3 {
+  @apply mb-2 text-lg font-medium;
+}
+
+.content p {
+  @apply my-4 leading-relaxed;
+}
+
+.content ul {
+  @apply list-inside list-disc pl-4;
+}
+
+.content ul li:not(:last-child) {
+  @apply my-2;
+}
+
+.content h1 + p,
+.content h2 + p,
+.content h3 + p {
+  @apply mt-0;
+}
+
+.content iframe,
+.content img {
+  @apply w-full rounded-3xl border border-white/5 bg-white/5 object-contain;
+}
+
+.content pre {
+  @apply overflow-x-scroll;
+}
