@@ -24,7 +24,11 @@
       <div
         class="my-auto aspect-video h-fit w-full overflow-hidden rounded-3xl border border-white/5 bg-white/5"
       >
-        <img src="/images/hero.webp" class="h-full w-full object-fill" />
+        <img
+          src="/images/hero.webp"
+          class="h-full w-full object-fill"
+          alt="Hero image"
+        />
       </div>
     </section>
     <section class="bg-neutral-900 py-12">
