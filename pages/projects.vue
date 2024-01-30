@@ -9,7 +9,7 @@
             :key="project._path"
             :name="project.name"
             :tag="project.tag"
-            :cover="project.cover"
+            :image="project.image"
             :to="project.to"
           />
         </template>

@@ -13,7 +13,7 @@
             :key="article._path"
             :title="article.title"
             :published-at="article.publishedAt"
-            :cover="article.cover"
+            :image="article.image"
             :to="article._path"
           />
         </template>

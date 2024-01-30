@@ -14,8 +14,9 @@
         {{ props.tag }}
       </span>
       <img
-        v-if="props.cover"
-        :src="props.cover"
+        v-if="props.image"
+        :src="props.image.src || props.image"
+        :alt="props.image.alt"
         class="h-full w-full object-cover"
       />
     </div>
@@ -23,7 +24,7 @@
       <span
         class="flex-1 text-neutral-400 transition-colors hover:text-neutral-100"
       >
-        {{ props.name }}
+        {{ props.title }}
       </span>
       <div class="flex items-center gap-2">
         <Icon
@@ -37,16 +38,16 @@
 
 <script setup lang="ts">
 interface Props {
-  name?: string;
+  title?: string;
   tag?: string;
-  cover?: string;
+  image?: { src: string; alt: string } | string;
   to?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  name: "Project name",
+  title: "Project name",
   tag: undefined,
-  cover: undefined,
+  image: undefined,
   to: undefined,
 });
 

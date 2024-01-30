@@ -49,8 +49,9 @@
           {{ doc.title }}
         </h1>
         <img
-          v-if="doc.cover"
-          :src="doc.cover"
+          v-if="doc.image"
+          :src="doc.image.src || doc.image"
+          :alt="doc.image.alt"
           class="mb-6 aspect-video w-full max-w-xl rounded-3xl border border-white/5 bg-white/5 object-cover"
         />
         <p class="mb-12 max-w-xl text-justify text-neutral-400">
@@ -64,6 +65,27 @@
 
 <script setup lang="ts">
 import "~/assets/styles/content.css";
+
+const route = useRoute();
+
+const { data: page } = await useAsyncData(
+  "post",
+  queryContent(route.path).findOne,
+);
+
+useSeoMeta({
+  ogTitle: page.value?.title,
+  ogDescription: page.value?.description,
+  ogUrl: useRuntimeConfig().public.BASE_URL + route.fullPath,
+  ogImage: page.value?.image?.src || page.value?.image,
+  ogImageAlt: page.value?.image?.alt,
+  twitterTitle: page.value?.title,
+  twitterDescription: page.value?.description,
+  twitterImage: page.value?.image?.src || page.value?.image,
+  twitterImageAlt: page.value?.image?.alt,
+  twitterCard: "summary",
+});
+
 const content = ref<HTMLElement | null>();
 const activeTocId = ref<string | null>();
 

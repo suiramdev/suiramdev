@@ -2,7 +2,7 @@
 title: The Answer to Life, the Universe, and the 42 School Pre-Registration Exam
 description: Learn about my journey to passing the notoriously difficult pre-registration exam at 42 School, and how I was ultimately accepted into this prestigious institution. Discover the strategies and mindset that helped me succeed, and find out what the "Answer to Life, the Universe, and Everything" really means in the context of the exam.
 publishedAt: 2022-09-18
-cover: https://content.fortune.com/wp-content/uploads/2019/03/ven04.-42-software-school.jpg
+image: https://content.fortune.com/wp-content/uploads/2019/03/ven04.-42-software-school.jpg
 ---
 
 I recently enrolled in the pre-registration competition at 42 school in Paris, also known as the "pool." Unfortunately, I haven't had enough time to document my thoughts and experiences weekly as I had hoped. However, I still want to keep a written record of this experience as a memory, inspired by a video I saw by IciAmyPlant.

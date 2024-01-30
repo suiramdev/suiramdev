@@ -85,9 +85,9 @@
             <ProjectCard
               v-for="project in list"
               :key="project._path"
-              :name="project.name"
+              :title="project.title"
               :tag="project.tag"
-              :cover="project.cover"
+              :image="project.image"
               :to="project.to"
             />
           </template>
@@ -113,7 +113,7 @@
               :key="article._path"
               :title="article.title"
               :published-at="article.publishedAt"
-              :cover="article.cover"
+              :image="article.image"
               :to="article._path"
             />
           </template>
