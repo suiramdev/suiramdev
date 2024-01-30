@@ -9,6 +9,7 @@
       'border-neutral-700 bg-neutral-800 transition-colors hover:border-neutral-600 hover:bg-neutral-700':
         props.variant === 'secondary',
     }"
+    :target="props.to && isExternal(props.to) ? '_blank' : undefined"
   >
     <slot />
   </component>
@@ -26,4 +27,6 @@ const props = withDefaults(defineProps<Props>(), {
   variant: "primary",
   to: undefined,
 });
+
+const isExternal = (url: string) => url.startsWith("http");
 </script>

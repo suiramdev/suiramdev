@@ -5,7 +5,7 @@
     :class="{
       'after:opacity-5': props.to === $route.path || forceActive,
     }"
-    :rel="isExternal(props.to) ? 'noopener noreferrer' : undefined"
+    :target="props.to && isExternal(props.to) ? '_blank' : undefined"
   >
     <div
       v-if="$slots.icon"
@@ -16,7 +16,7 @@
     </div>
     <slot />
     <Icon
-      v-if="isExternal(props.to)"
+      v-if="props.to && isExternal(props.to)"
       name="ph:arrow-square-out"
       class="ml-auto h-4 w-4"
     />
@@ -33,7 +33,7 @@ interface Props {
 const isExternal = (url: string) => url.startsWith("http");
 
 const props = withDefaults(defineProps<Props>(), {
-  to: "",
+  to: undefined,
   iconClass: "bg-neutral-800 text-neutral-300 fill-neutral-300",
   forceActive: false,
 });
