@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxtjs/tailwindcss",
     "nuxt-icon",
     "@nuxt/content",
+    "@nuxthq/studio",
     "nuxt-marquee",
     "@hypernym/nuxt-gsap",
   ],
