@@ -22,7 +22,12 @@
       </div>
     </section>
     <section class="bg-neutral-900 py-12">
-      <NuxtMarquee gradient gradient-color="#171717" auto-fill>
+      <NuxtMarquee
+        gradient
+        gradient-color="#171717"
+        auto-fill
+        class="grayscale"
+      >
         <img
           src="/images/sponsors/logisoap.webp"
           alt="Logisoap logo"
@@ -44,6 +49,7 @@
         gradient-color="#171717"
         auto-fill
         direction="right"
+        class="grayscale"
       >
         <img
           src="/images/sponsors/logisoap.webp"
