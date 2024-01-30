@@ -6,14 +6,20 @@
           Turning your sketches into digital reality
         </h1>
         <p class="text-xl text-neutral-400">
-          Elevate your project with custom web solutions that blend modern
-          aesthetics and robust functionality, captivating investors, clients,
-          and partners
+          I am a full-stack freelance developer. I help companies and
+          individuals build and improve their websites and applications. I'm a
+          React specialist, but I also have knowledge of Vue.JS.
         </p>
-        <AppButton to="https://cal.com/suiramdev/first">
-          <Icon name="ph:phone-fill" />
-          Book a call
-        </AppButton>
+        <div class="flex gap-4">
+          <AppButton to="https://cal.com/suiramdev/first">
+            <Icon name="ph:phone-fill" />
+            Book a call
+          </AppButton>
+          <AppButton variant="secondary" @click="downloadCV">
+            <Icon name="ph:download-simple-bold" />
+            or download my CV
+          </AppButton>
+        </div>
       </div>
       <div
         class="my-auto aspect-video h-fit w-full overflow-hidden rounded-3xl border border-white/5 bg-white/5"
@@ -68,24 +74,53 @@
         />
       </NuxtMarquee>
     </section>
-    <section class="py-12">
-      <h2 class="mb-6 max-w-sm text-2xl font-bold">They trust me</h2>
+    <section class="pb-6 pt-12">
+      <p class="mb-3 font-hand text-lg text-indigo-400">Projects</p>
+      <h2 class="mb-6 text-2xl font-bold">
+        I have worked on a wide range of projects
+      </h2>
       <div class="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
-        <ProjectCard
-          name="Storedge"
-          src="/images/projects/storedge.webp"
-          to="https://github.com/suiramdev/storedge-core"
-        />
-        <ProjectCard
-          name="Logisoap"
-          src="/images/projects/logisoap.webp"
-          to="https://www.logisoap.com/"
-        />
-        <ProjectCard
-          name="MyDemenageur"
-          src="/images/projects/mydemenageur.webp"
-          to="https://www.mydemenageur.com/"
-        />
+        <ContentList :query="projectsQuery">
+          <template #default="{ list }">
+            <ProjectCard
+              v-for="project in list"
+              :key="project._path"
+              :name="project.name"
+              :tag="project.tag"
+              :cover="project.cover"
+              :to="project.to"
+            />
+          </template>
+          <template #not-found>
+            <span class="text-neutral-400">No projects found.</span>
+          </template>
+        </ContentList>
+      </div>
+      <AppButton variant="secondary" class="mx-auto" to="/projects"
+        >See more</AppButton
+      >
+    </section>
+    <section class="pt-6">
+      <p class="mb-3 font-hand text-lg text-indigo-400">Articles</p>
+      <h2 class="mb-6 text-2xl font-bold">
+        I write about my journey as a developer
+      </h2>
+      <div class="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
+        <ContentList :query="articlesQuery">
+          <template #default="{ list }">
+            <BlogCard
+              v-for="article in list"
+              :key="article._path"
+              :title="article.title"
+              :published-at="article.publishedAt"
+              :cover="article.cover"
+              :to="article._path"
+            />
+          </template>
+          <template #not-found>
+            <span class="text-neutral-400">No articles found.</span>
+          </template>
+        </ContentList>
       </div>
       <AppButton variant="secondary" class="mx-auto" to="/projects"
         >See more</AppButton
@@ -93,3 +128,37 @@
     </section>
   </main>
 </template>
+
+<script setup lang="ts">
+import type { QueryBuilderParams } from "@nuxt/content/dist/runtime/types";
+import { track } from "@vercel/analytics";
+
+const projectsQuery: QueryBuilderParams = {
+  path: "/projects",
+  sort: [{ releasedAt: -1 }],
+  limit: 3,
+};
+
+const articlesQuery: QueryBuilderParams = {
+  path: "/blog",
+  limit: 3,
+  sort: [{ publishedAt: -1 }],
+  where: {
+    // @ts-ignore
+    draft: { $ne: true },
+  },
+};
+
+const downloadCV = () => {
+  const link = document.createElement("a");
+  link.href = "/CV_EN_MARIUS_NOUCHET.pdf";
+  link.target = "_blank";
+  link.download = "CV_EN_MARUS_NOUCHET.pdf";
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  track("Download CV");
+};
+</script>

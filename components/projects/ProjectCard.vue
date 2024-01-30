@@ -14,8 +14,8 @@
         {{ props.tag }}
       </span>
       <img
-        v-if="props.src"
-        :src="props.src"
+        v-if="props.cover"
+        :src="props.cover"
         class="h-full w-full object-cover"
       />
     </div>
@@ -39,14 +39,14 @@
 interface Props {
   name?: string;
   tag?: string;
-  src?: string;
+  cover?: string;
   to?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   name: "Project name",
   tag: undefined,
-  src: undefined,
+  cover: undefined,
   to: undefined,
 });
 
