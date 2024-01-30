@@ -7,7 +7,7 @@
           <ProjectCard
             v-for="project in list"
             :key="project._path"
-            :name="project.name"
+            :title="project.title"
             :tag="project.tag"
             :image="project.image"
             :to="project.to"
