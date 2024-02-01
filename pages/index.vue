@@ -31,29 +31,7 @@
         />
       </div>
     </section>
-    <section class="bg-neutral-900 py-12">
-      <NuxtMarquee
-        gradient
-        gradient-color="#171717"
-        auto-fill
-        class="grayscale"
-      >
-        <img
-          src="/images/sponsors/logisoap.webp"
-          alt="Logisoap logo"
-          class="mx-5"
-        />
-        <img
-          src="/images/sponsors/mydemenageur.webp"
-          alt="My demenageur logo"
-          class="mx-5"
-        />
-        <img
-          src="/images/sponsors/feldrise.webp"
-          alt="Feldrise logo"
-          class="mx-5"
-        />
-      </NuxtMarquee>
+    <section class="py-12">
       <NuxtMarquee
         gradient
         gradient-color="#171717"
