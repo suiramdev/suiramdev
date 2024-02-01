@@ -79,8 +79,8 @@
       </NuxtMarquee>
     </section>
     <section class="pb-6 pt-12">
-      <p class="mb-3 font-hand text-lg text-indigo-400">Projects</p>
-      <h2 class="mb-6 text-2xl font-bold">
+      <p class="mb-3 font-hand text-3xl text-indigo-400">Projects</p>
+      <h2 class="mb-6 text-4xl font-bold">
         I have worked on a wide range of projects
       </h2>
       <div class="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
@@ -105,8 +105,8 @@
       >
     </section>
     <section class="pt-6">
-      <p class="mb-3 font-hand text-lg text-indigo-400">Articles</p>
-      <h2 class="mb-6 text-2xl font-bold">
+      <p class="mb-3 font-hand text-3xl text-indigo-400">Articles</p>
+      <h2 class="mb-6 text-4xl font-bold">
         I write about my journey as a developer
       </h2>
       <div class="mb-6 grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
