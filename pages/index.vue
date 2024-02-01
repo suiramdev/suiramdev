@@ -26,7 +26,7 @@
       >
         <img
           src="/images/hero.webp"
-          class="h-full w-full object-fill"
+          class="h-full w-full object-cover object-left-top"
           alt="Hero image"
         />
       </div>
