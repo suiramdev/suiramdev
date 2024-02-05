@@ -1,12 +1,12 @@
 <template>
   <NuxtLink
-    class="flex flex-col gap-4 rounded-xl border border-white/5 p-4 transition-colors hover:bg-white/5"
+    class="flex flex-col gap-4 rounded-xl border border-neutral-800 p-4 transition-colors hover:bg-white/5"
   >
     <img
       v-if="props.image"
       :src="props.image.src || props.image"
       :alt="props.image.alt"
-      class="aspect-video w-full rounded-3xl border border-white/5 bg-white/5 object-cover"
+      class="aspect-video w-full rounded-3xl border border-neutral-800 bg-neutral-700 object-cover"
     />
     <span class="flex-1 text-lg font-medium">{{ props.title }}</span>
     <span class="font-hand text-neutral-400">

@@ -22,7 +22,7 @@
         </div>
       </div>
       <div
-        class="my-auto aspect-video h-fit w-full overflow-hidden rounded-3xl border border-white/5 bg-white/5"
+        class="my-auto aspect-video h-fit w-full overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-700"
       >
         <img
           src="/images/hero.webp"

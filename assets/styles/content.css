@@ -1,17 +1,21 @@
 .content h1 {
-  @apply mb-6 mt-12 text-2xl font-bold;
+  @apply mb-6 mt-24 text-5xl font-black;
 }
 
 .content h2 {
-  @apply mb-4 text-xl font-semibold;
+  @apply mb-6 mt-24 text-2xl font-bold;
 }
 
 .content h3 {
-  @apply mb-2 text-lg font-medium;
+  @apply my-6 text-xl font-semibold;
+}
+
+.content h4 {
+  @apply my-6 text-lg font-medium text-neutral-300;
 }
 
 .content p {
-  @apply my-4 leading-relaxed;
+  @apply my-6 leading-relaxed;
 }
 
 .content ul {
@@ -22,15 +26,9 @@
   @apply my-2;
 }
 
-.content h1 + p,
-.content h2 + p,
-.content h3 + p {
-  @apply mt-0;
-}
-
 .content iframe,
 .content img {
-  @apply w-full rounded-3xl border border-white/5 bg-white/5 object-contain;
+  @apply w-full rounded-3xl border border-neutral-800 bg-neutral-700 object-contain;
 }
 
 .content pre {

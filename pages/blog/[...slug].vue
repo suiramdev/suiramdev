@@ -45,14 +45,14 @@
             }).format(new Date(doc.publishedAt))
           }}
         </p>
-        <h1 class="mb-6 w-full max-w-xl text-2xl font-bold">
+        <h1 class="mb-6 w-full max-w-xl text-4xl font-bold">
           {{ doc.title }}
         </h1>
         <img
           v-if="doc.image"
           :src="doc.image.src || doc.image"
           :alt="doc.image.alt"
-          class="mb-6 aspect-video w-full max-w-xl rounded-3xl border border-white/5 bg-white/5 object-cover"
+          class="mb-6 aspect-video w-full max-w-xl rounded-3xl border border-neutral-800 bg-neutral-700 object-cover"
         />
         <p class="mb-12 max-w-xl text-justify text-neutral-400">
           {{ doc.description }}

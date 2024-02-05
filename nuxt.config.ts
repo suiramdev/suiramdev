@@ -22,6 +22,11 @@ export default defineNuxtConfig({
       pathPrefix: false,
     },
   ],
+  content: {
+    highlight: {
+      theme: "github-dark",
+    },
+  },
   gsap: {
     composables: true,
     extraPlugins: {

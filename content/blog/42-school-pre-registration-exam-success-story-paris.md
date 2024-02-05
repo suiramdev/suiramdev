@@ -10,11 +10,11 @@ I recently enrolled in the pre-registration competition at 42 school in Paris, a
 
 <iframe class="w-full aspect-video" src="https://www.youtube.com/embed/z7UuSZIcm5c" title="Ça changerait quoi d’être immortel ?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-# Context
+## Context
 
 I have been interested in attending 42 school for many years. I have completed a baccalaureate and a BTS, but neither of these traditional education paths were a good fit for me. 42 school offers an alternative approach to education that is suited to those who prefer self-directed, project-based learning and working with peers. It is also a great option for those who want to learn a new skill or profession.
 
-## What's a peer?
+### What's a peer?
 
 Peer-to-peer (P2P) learning is a type of education that occurs when students learn and teach each other. It is different from traditional teacher-centered education, where the teacher is the primary source of information and the students are passive recipients of knowledge. In P2P learning, students take on more active roles in their own education and are encouraged to share their knowledge and skills with their peers.\
 \
@@ -22,17 +22,17 @@ One of the benefits of P2P learning is that it allows students to learn from dif
 \
 The 42 school is one educational institution that heavily rely on the P2P learning method. There are no teachers and the students are in charge of their own curriculum and learning process. This can be challenging for some students but many find that it allows for a deeper understanding of the material and greater flexibility in how they choose to learn.
 
-## How to get in?
+### How to get in?
 
 42 school is a unique educational institution that has an open enrollment policy, meaning that anyone can apply to attend the school, regardless of their background or prior education. To be admitted to 42, a student must pass a rigorous pre-registration process that includes a coding test.\
 \
 The coding test is done over a period of about a month, and is known as the "pool". During this time, students are given access to a set of coding exercises and challenges, which they must complete on their own. These exercises cover a range of topics and difficulty levels, and are designed to test the student's knowledge of programming concepts and their ability to write and understand code.
 
-# Experience
+## Experience
 
 My experience at 42 school has been truly remarkable. The progress that participants made in just one month of the program was astounding. The diversity of the participants, composed of at most 450 individuals from various backgrounds, ages, professions and countries, created a rich and enlightening environment. One of the things I appreciate about 42 is the strong sense of community and socialization. The support and camaraderie among the students is remarkable, and the opportunity to learn from and work alongside my peers was invaluable. The connections and friendships that I have formed during my time here are priceless, and I am consistently inspired by the drive and determination of my fellow students.
 
-## Besides study
+### Besides study
 
 Beyond the curriculum, one of the things that sets 42 school apart is the variety of extracurricular activities and events available to students. From foam parties and blind tests, to coding workshops and guest speaker events, there is always something happening at the school. In conclusion, I can confidently say that my experience at 42 school has surpassed my expectations. It's a one of a kind and life-changing educational experience and I'm honored to be a student and be a part of it 🥳
 

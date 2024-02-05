@@ -5,7 +5,7 @@
     :target="props.to && isExternal(props.to) ? '_blank' : undefined"
   >
     <div
-      class="relative aspect-video w-full overflow-hidden rounded-3xl border border-white/5 bg-white/5 after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-white after:opacity-0 after:transition-opacity after:content-[''] hover:after:opacity-5"
+      class="relative aspect-video w-full overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-700 after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-white after:opacity-0 after:transition-opacity after:content-[''] hover:after:opacity-5"
     >
       <span
         v-if="props.tag"
