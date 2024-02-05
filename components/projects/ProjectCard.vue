@@ -27,6 +27,12 @@
         {{ props.title }}
       </span>
       <div class="flex items-center gap-2">
+        <NuxtLink v-if="props.github" :to="props.github" target="_blank">
+          <Icon
+            name="akar-icons:github-fill"
+            class="text-neutral-400 transition-colors hover:text-neutral-100"
+          />
+        </NuxtLink>
         <Icon
           name="ph:arrow-square-out"
           class="text-neutral-400 transition-colors hover:text-neutral-100"
@@ -42,6 +48,7 @@ interface Props {
   tag?: string;
   image?: { src: string; alt: string } | string;
   to?: string;
+  github?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -49,6 +56,7 @@ const props = withDefaults(defineProps<Props>(), {
   tag: undefined,
   image: undefined,
   to: undefined,
+  github: undefined,
 });
 
 const isExternal = (url: string) => url.startsWith("http");
