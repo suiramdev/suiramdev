@@ -71,6 +71,7 @@
               :tag="project.tag"
               :image="project.image"
               :to="project.to"
+              :github="project.github"
             />
           </template>
           <template #not-found>
