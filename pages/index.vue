@@ -68,7 +68,6 @@
               v-for="project in list"
               :key="project._path"
               :title="project.title"
-              :tag="project.tag"
               :image="project.image"
               :to="project.to"
               :github="project.github"
