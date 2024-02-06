@@ -113,7 +113,6 @@
 
 <script setup lang="ts">
 import type { QueryBuilderParams } from "@nuxt/content/dist/runtime/types";
-const { gtag } = useGtag();
 
 const projectsQuery: QueryBuilderParams = {
   path: "/projects",
@@ -140,9 +139,5 @@ const downloadCV = () => {
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
-
-  gtag("event", "download", {
-    event_label: "CV",
-  });
 };
 </script>

@@ -4,6 +4,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       baseURL: "https://suiram.dev",
+      posthogPublicKey: "",
+      posthogHost: "https://app.posthog.com",
     },
   },
   css: ["~/assets/styles/main.css"],
@@ -14,7 +16,6 @@ export default defineNuxtConfig({
     "@nuxthq/studio",
     "nuxt-marquee",
     "@hypernym/nuxt-gsap",
-    "nuxt-gtag",
   ],
   components: [
     {
