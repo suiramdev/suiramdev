@@ -1,7 +1,5 @@
 <template>
-  <code
-    class="w-fit rounded-lg border border-neutral-800 bg-neutral-700 px-2 py-1"
-  >
+  <code class="w-fit bg-indigo-400/50 py-1 font-sans text-lg">
     <slot />
   </code>
 </template>

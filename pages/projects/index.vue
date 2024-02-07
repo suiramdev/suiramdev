@@ -1,6 +1,6 @@
 <template>
   <main class="px-12 pb-12 pt-24 lg:px-24">
-    <h1 class="mb-12 max-w-sm text-2xl font-bold">My projects</h1>
+    <h1 class="mb-12 max-w-xl text-4xl font-bold">My projects</h1>
     <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3">
       <ContentList :query="query">
         <template #default="{ list }">

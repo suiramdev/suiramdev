@@ -48,15 +48,13 @@
         <p class="mb-12 max-w-xl text-justify text-neutral-400">
           {{ doc.description }}
         </p>
-        <ContentRenderer ref="content" :value="doc" class="content" />
+        <ContentRenderer ref="content" :value="doc" />
       </main>
     </article>
   </ContentDoc>
 </template>
 
 <script setup lang="ts">
-import "~/assets/styles/content.css";
-
 const route = useRoute();
 
 const { data: page } = await useAsyncData(

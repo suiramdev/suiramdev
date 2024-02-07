@@ -1,7 +1,7 @@
 <template>
   <main class="px-12 pb-12 pt-24 lg:px-24">
-    <h1 class="mb-6 max-w-sm text-2xl font-bold">My blog</h1>
-    <p class="mb-12 max-w-sm text-neutral-400">
+    <h1 class="mb-6 max-w-xl text-4xl font-bold">My blog</h1>
+    <p class="mb-12 max-w-xl text-neutral-400">
       Discover my journal, filled with diverse content including blog posts that
       share my worldview, professional insights, and introspective thoughts.
     </p>

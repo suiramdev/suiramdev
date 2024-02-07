@@ -2,7 +2,7 @@
   <ContentDoc v-slot="{ doc }">
     <article class="px-12 pb-12 pt-24 lg:px-24">
       <aside
-        class="sticky left-0 top-0 float-left -mt-12 hidden h-fit w-60 pr-12 pt-12 md:block"
+        class="sticky left-0 top-0 float-left -mt-12 hidden h-fit w-60 pr-12 pt-12 lg:block"
       >
         <AppButton variant="secondary" to="/blog" class="mb-12">
           <Icon name="ph:arrow-arc-left-bold" />
@@ -36,7 +36,10 @@
         </nav>
       </aside>
       <main class="overflow-hidden">
-        <p class="mb-6 max-w-xl font-hand text-neutral-400">
+        <h1 class="mb-6 w-full max-w-xl text-4xl font-bold">
+          {{ doc.title }}
+        </h1>
+        <p class="my-6 max-w-xl font-hand text-neutral-400">
           {{
             new Intl.DateTimeFormat("en-US", {
               year: "numeric",
@@ -45,27 +48,22 @@
             }).format(new Date(doc.publishedAt))
           }}
         </p>
-        <h1 class="mb-6 w-full max-w-xl text-4xl font-bold">
-          {{ doc.title }}
-        </h1>
         <img
           v-if="doc.image"
           :src="doc.image.src || doc.image"
           :alt="doc.image.alt"
-          class="mb-6 aspect-video w-full max-w-xl rounded-3xl border border-neutral-800 bg-neutral-700 object-cover"
+          class="my-6 aspect-video w-full max-w-xl rounded-3xl border border-neutral-800 bg-neutral-700 object-cover"
         />
-        <p class="mb-12 max-w-xl text-justify text-neutral-400">
+        <p class="mb-12 mt-6 max-w-xl text-neutral-400">
           {{ doc.description }}
         </p>
-        <ContentRenderer ref="content" :value="doc" class="content" />
+        <ContentRenderer ref="content" :value="doc" />
       </main>
     </article>
   </ContentDoc>
 </template>
 
 <script setup lang="ts">
-import "~/assets/styles/content.css";
-
 const route = useRoute();
 
 const { data: page } = await useAsyncData(

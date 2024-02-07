@@ -4,7 +4,7 @@
       {{ language }}
     </span>
     <pre
-      class="flex rounded-lg border border-neutral-700 bg-neutral-800 p-5"
+      class="flex overflow-x-scroll rounded-lg border border-neutral-700 bg-neutral-800 p-5"
       :class="props.class"
     >
       <slot />
