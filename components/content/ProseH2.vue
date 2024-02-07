@@ -16,7 +16,6 @@
 
 <script setup lang="ts">
 import { computed, useRuntimeConfig } from "#imports";
-const { $toast } = useNuxtApp();
 
 const props = defineProps<{ id?: string }>();
 
@@ -25,6 +24,5 @@ const generate = computed(() => props.id && headings?.anchorLinks?.h2);
 const copyLink = () => {
   if (!props.id) return;
   navigator.clipboard.writeText(`${window.location.href}#${props.id}`);
-  $toast.success("Link copied to clipboard");
 };
 </script>
