@@ -2,7 +2,7 @@
   <ContentDoc v-slot="{ doc }">
     <article class="px-12 pb-12 pt-24 lg:px-24">
       <aside
-        class="sticky left-0 top-0 float-left -mt-12 hidden h-fit w-60 pr-12 pt-12 lg:block"
+        class="sticky left-0 top-0 float-left -mt-12 hidden h-fit w-60 pr-12 pt-12 md:block"
       >
         <AppButton variant="secondary" to="/blog" class="mb-12">
           <Icon name="ph:arrow-arc-left-bold" />
@@ -36,27 +36,26 @@
         </nav>
       </aside>
       <main class="overflow-hidden">
-        <h1 class="mb-6 w-full max-w-xl text-4xl font-bold">
-          {{ doc.title }}
-        </h1>
-        <p class="my-6 max-w-xl font-hand text-neutral-400">
-          {{
-            new Intl.DateTimeFormat("en-US", {
-              year: "numeric",
-              month: "short",
-              day: "2-digit",
-            }).format(new Date(doc.publishedAt))
-          }}
-        </p>
-        <img
-          v-if="doc.image"
-          :src="doc.image.src || doc.image"
-          :alt="doc.image.alt"
-          class="my-6 aspect-video w-full max-w-xl rounded-3xl border border-neutral-800 bg-neutral-700 object-cover"
-        />
-        <p class="mb-12 mt-6 max-w-xl text-neutral-400">
-          {{ doc.description }}
-        </p>
+        <div class="mb-12 flex w-full max-w-xl flex-col gap-6">
+          <h1 class="text-4xl font-bold">
+            {{ doc.title }}
+          </h1>
+          <p class="font-hand text-neutral-400">
+            {{
+              new Intl.DateTimeFormat("en-US", {
+                year: "numeric",
+                month: "short",
+                day: "2-digit",
+              }).format(new Date(doc.publishedAt))
+            }}
+          </p>
+          <img
+            v-if="doc.image"
+            :src="doc.image.src || doc.image"
+            :alt="doc.image.alt"
+            class="aspect-video rounded-3xl border border-neutral-800 bg-neutral-700 object-cover"
+          />
+        </div>
         <ContentRenderer ref="content" :value="doc" />
       </main>
     </article>
