@@ -1,5 +1,5 @@
 <template>
-  <code class="w-fit bg-indigo-400/50 py-1 font-sans text-lg">
+  <code class="rounded-lg border border-neutral-700 bg-neutral-800 p-1.5">
     <slot />
   </code>
 </template>
