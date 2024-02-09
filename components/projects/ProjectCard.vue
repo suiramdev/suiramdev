@@ -31,7 +31,7 @@
           />
         </NuxtLink>
         <NuxtLink
-          :to="props.to"
+          :to="props.external"
           :target="props.to && isExternal(props.to) ? '_blank' : undefined"
         >
           <Icon
@@ -49,6 +49,7 @@ interface Props {
   title?: string;
   image?: { src: string; alt: string } | string;
   to?: string;
+  external?: string;
   github?: string;
 }
 
@@ -56,6 +57,7 @@ const props = withDefaults(defineProps<Props>(), {
   title: "Project name",
   image: undefined,
   to: undefined,
+  external: undefined,
   github: undefined,
 });
 

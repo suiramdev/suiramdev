@@ -69,7 +69,8 @@
               :key="project._path"
               :title="project.title"
               :image="project.image"
-              :to="project.to"
+              :to="project._path"
+              :external="project.external"
               :github="project.github"
             />
           </template>
