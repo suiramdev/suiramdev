@@ -3,7 +3,6 @@
     <NuxtLink
       :to="props.to"
       class="relative aspect-video w-full overflow-hidden rounded-3xl border border-neutral-800 bg-neutral-700 after:absolute after:left-0 after:top-0 after:h-full after:w-full after:bg-white after:opacity-0 after:transition-opacity after:content-[''] hover:after:opacity-5"
-      :target="props.to && isExternal(props.to) ? '_blank' : undefined"
     >
       <img
         v-if="props.image"
@@ -13,10 +12,7 @@
       />
     </NuxtLink>
     <div class="flex items-center justify-between">
-      <NuxtLink
-        :to="props.to"
-        :target="props.to && isExternal(props.to) ? '_blank' : undefined"
-      >
+      <NuxtLink :to="props.to">
         <span
           class="flex-1 text-neutral-400 transition-colors hover:text-neutral-100"
         >
@@ -30,10 +26,7 @@
             class="text-neutral-400 transition-colors hover:text-neutral-100"
           />
         </NuxtLink>
-        <NuxtLink
-          :to="props.external"
-          :target="props.to && isExternal(props.to) ? '_blank' : undefined"
-        >
+        <NuxtLink :to="props.external" :target="_blank">
           <Icon
             name="ph:arrow-square-out"
             class="text-neutral-400 transition-colors hover:text-neutral-100"
@@ -60,6 +53,4 @@ const props = withDefaults(defineProps<Props>(), {
   external: undefined,
   github: undefined,
 });
-
-const isExternal = (url: string) => url.startsWith("http");
 </script>
