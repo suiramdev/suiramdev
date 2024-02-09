@@ -4,7 +4,7 @@ head.title: MyDemenageur - Revolutionizing the Moving Experience
 description: MyDemenageur stands out as a pivotal project in my freelance career, a platform transforming the moving process by bridging individuals with skilled movers. This project not only tested my full-stack development skills but also honed my expertise in Search Engine Optimization (SEO), showcasing my ability to deliver under tight deadlines while ensuring the platform's high visibility and user-friendly experience.
 image.src: /images/projects/mydemenageur.webp
 image.alt: User interface of MyDemenageur, facilitating connections between individuals and movers
-to: https://www.mydemenageur.com/
+external: https://www.mydemenageur.com/
 releasedAt: 2022
 ---
 

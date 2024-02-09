@@ -4,7 +4,7 @@ head.title: Gabi & Margot - Full Stack Developer's Venture into E-commerce
 description: Gabi & Margot showcases my full-stack development journey, creating a unique e-commerce platform for vintage furniture using Shopify's Hydrogen framework. This project highlights my skills in API integration, frontend design with Figma, and backend development, culminating in a comprehensive online shopping experience.
 image.src: /images/projects/gabi-margot.webp
 image.alt: Preview of the Gabi & Margot project
-to: https://gabi-margot.vercel.app/
+external: https://gabi-margot.vercel.app/
 github: https://github.com/suiramdev/gabi-margot
 releasedAt: 2021
 ---

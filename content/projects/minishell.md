@@ -3,7 +3,7 @@ title: Minishell - Emulating Unix Shell Behavior
 description: Minishell, a challenging project from school 42, showcases my software development capabilities by replicating the complex functionalities of the traditional Unix shell, bash. This project emphasizes meticulous error handling, signal processing, and command execution, underlining the project's importance and complexity in the 42 school curriculum.
 image.src: /images/projects/minishell.webp
 image.alt: Interface of the Minishell project, demonstrating command-line interaction
-to: https://github.com/suiramdev/42-minishell
+external: https://github.com/suiramdev/42-minishell
 github: https://github.com/suiramdev/42-minishell
 releasedAt: 2023
 ---

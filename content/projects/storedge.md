@@ -4,7 +4,7 @@ head.title: Storedge - Reinventing E-commerce with Headless CMS
 description: Introducing Storedge, a groundbreaking headless e-commerce CMS designed for the modern digital storefront. Leveraging a GraphQL-first approach, Storedge offers unparalleled flexibility and performance for online retailers. This platform not only enhances store efficiency but also provides a modular architecture for easy customization and integration. Ideal for developers and merchants aiming for a scalable and adaptable e-commerce solution, Storedge represents the pinnacle of full-stack development innovation in creating dynamic, user-centric online experiences.
 image.src: /images/projects/storedge/thumbnail.webp
 image.alt: Preview of Storedge's built-in dashboard
-to: https://storedge.suiram.dev/
+external: https://storedge.suiram.dev/
 github: https://github.com/suiramdev/storedge-core
 releasedAt: 2024
 ---
