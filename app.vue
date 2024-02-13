@@ -9,8 +9,6 @@
 </template>
 
 <script setup lang="ts">
-import { SpeedInsights } from "@vercel/speed-insights/nuxt";
-
 const title = "Marius Nouchet's portfolio";
 const description =
   "Discover my portfolio, filled with diverse content including blog posts that share my worldview, professional insights, and introspective thoughts.";
