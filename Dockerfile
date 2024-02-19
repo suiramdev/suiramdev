@@ -6,6 +6,12 @@ RUN npm install -g pnpm
 FROM base AS build
 COPY . .
 RUN pnpm install
+
+ARG DOMAIN
+ARG NUXT_PUBLIC_BASE_URL
+ARG NUXT_PUBLIC_POSTHOG_PUBLIC_KEY
+ARG NUXT_PUBLIC_STUDIO_TOKENS
+
 RUN pnpm run build
 
 FROM node:16.20.2-slim
