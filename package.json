@@ -14,7 +14,6 @@
     "lintfix": "prettier --write --list-different . && pnpm run lint:js --fix"
   },
   "devDependencies": {
-    "@hypernym/nuxt-gsap": "^2.4.2",
     "@nuxthq/studio": "^1.0.10",
     "@nuxtjs/eslint-config-typescript": "^12.1.0",
     "@nuxtjs/tailwindcss": "^6.11.2",

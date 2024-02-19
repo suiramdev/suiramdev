@@ -15,7 +15,6 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxthq/studio",
     "nuxt-marquee",
-    "@hypernym/nuxt-gsap",
   ],
   components: [
     {
@@ -26,12 +25,6 @@ export default defineNuxtConfig({
   content: {
     highlight: {
       theme: "github-dark",
-    },
-  },
-  gsap: {
-    composables: true,
-    extraPlugins: {
-      scrollTrigger: true,
     },
   },
 });

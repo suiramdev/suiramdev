@@ -13,9 +13,6 @@ dependencies:
     version: 1.105.0
 
 devDependencies:
-  '@hypernym/nuxt-gsap':
-    specifier: ^2.4.2
-    version: 2.4.2
   '@nuxthq/studio':
     specifier: ^1.0.10
     version: 1.0.10
@@ -655,12 +652,6 @@ packages:
 
   /@humanwhocodes/object-schema@2.0.2:
     resolution: {integrity: sha512-6EwiSjwWYP7pTckG6I5eyFANjPhmPjUX9JRLUSfNPC7FX7zK9gyZAfUEaECL6ALTpGX5AjnBq3C9XmVWPitNpw==}
-
-  /@hypernym/nuxt-gsap@2.4.2:
-    resolution: {integrity: sha512-Oep+0ABn58PbJo4tX8A8ja2hGjjBtyFE7DJAF/q8DIDGXMFaZlTbvcreCmMdKhuJ5NR8ODE0fEObUEYci901gg==}
-    dependencies:
-      gsap: 3.12.5
-    dev: true
 
   /@iconify/collections@1.0.387:
     resolution: {integrity: sha512-/AisOmvHqLC/7InGGdM0eJkWSh1RW1Klct9IdntOLObUf0NaNdfTE8jFatCSPXXwtw69r9KHa9tUSQk8Wa3brg==}
@@ -4138,10 +4129,6 @@ packages:
 
   /graphemer@1.4.0:
     resolution: {integrity: sha512-EtKwoO6kxCL9WO5xipiHTZlSzBm7WLT627TqC/uVRd0HKmq8NXyebnNYxDoBi7wt8eTWrUrKXCOVaFq9x1kgag==}
-
-  /gsap@3.12.5:
-    resolution: {integrity: sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==}
-    dev: true
 
   /gzip-size@7.0.0:
     resolution: {integrity: sha512-O1Ld7Dr+nqPnmGpdhzLmMTQ4vAsD+rHwMm1NLUmoUFFymBOMKxCCrtDxqdBRYXdeEPEi3SyoR4TizJLQrnKBNA==}
