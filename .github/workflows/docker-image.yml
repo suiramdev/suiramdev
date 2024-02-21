@@ -47,3 +47,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            NUXT_PUBLIC_BASE_URL=${{ env.NUXT_PUBLIC_BASE_URL }}
+            NUXT_PUBLIC_POSTHOG_PUBLIC_KEY=${{ secrets.NUXT_PUBLIC_POSTHOG_PUBLIC_KEY }}
+            NUXT_PUBLIC_STUDIO_TOKENS=${{ secrets.NUXT_PUBLIC_STUDIO_TOKENS }}
