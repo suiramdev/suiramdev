@@ -1,0 +1,24 @@
+FROM node:20-slim AS base
+WORKDIR /app
+# Faster dependency install with pnpm
+RUN npm install -g pnpm
+
+FROM base AS build
+COPY . .
+RUN pnpm install
+
+ARG NUXT_PUBLIC_BASE_URL
+ENV NUXT_PUBLIC_BASE_URL=$NUXT_PUBLIC_BASE_URL
+ARG NUXT_PUBLIC_POSTHOG_PUBLIC_KEY
+ENV NUXT_PUBLIC_POSTHOG_PUBLIC_KEY=$NUXT_PUBLIC_POSTHOG_PUBLIC_KEY
+ARG NUXT_PUBLIC_STUDIO_TOKENS
+ENV NUXT_PUBLIC_STUDIO_TOKENS=$NUXT_PUBLIC_STUDIO_TOKENS
+
+RUN pnpm run build
+
+FROM node:16.20.2-slim
+WORKDIR /app
+COPY --from=build /app/.output/ .
+
+EXPOSE 3000
+CMD [ "node", "./server/index.mjs" ]
