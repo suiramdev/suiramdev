@@ -40,6 +40,10 @@ jobs:
           push: true
           tags: ${{ env.REGISTRY }}/${{ github.repository }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            NUXT_PUBLIC_BASE_URL=${{ env.NUXT_PUBLIC_BASE_URL }}
+            NUXT_PUBLIC_POSTHOG_PUBLIC_KEY=${{ env.NUXT_PUBLIC_POSTHOG_PUBLIC_KEY }}
+            NUXT_PUBLIC_STUDIO_TOKENS=${{ env.NUXT_PUBLIC_STUDIO_TOKENS }}
 
   deploy:
     needs: publish
