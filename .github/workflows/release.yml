@@ -48,17 +48,12 @@ jobs:
     steps:
       - name: Pull and up
         uses: appleboy/ssh-action@v0.1.5
-        env:
-          REGISTRY: ${{ env.REGISTRY }}
-          USERNAME: ${{ github.actor }}
-          PASSWORD: ${{ github.token }}
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
-          envs: REGISTRY,USERNAME,PASSWORD
           script: |
-            echo $PASSWORD | docker login $REGISTRY -u $USERNAME --password-stdin
-            cd /opt/stacks/suiramdev
+            echo ${{ github.token }} | docker login ${{ secrets.REGISTRY }} -u ${{ github.actor }} --password-stdin
+            cd ${{ secrets.WORK_DIR }}
             docker-compose pull && docker-compose up -d
