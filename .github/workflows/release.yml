@@ -54,6 +54,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            echo ${{ github.token }} | docker login ${{ secrets.REGISTRY }} -u ${{ github.actor }} --password-stdin
+            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ${{ secrets.REGISTRY }} -u "${{ github.actor }}" --password-stdin
             cd ${{ secrets.WORK_DIR }}
             docker-compose pull && docker-compose up -d
