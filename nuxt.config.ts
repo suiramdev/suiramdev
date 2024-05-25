@@ -16,6 +16,7 @@ export default defineNuxtConfig({
     "shadcn-nuxt",
     "@nuxtjs/color-mode",
     "@nuxt/eslint",
+    "@nuxt/image",
   ],
   components: [
     {
