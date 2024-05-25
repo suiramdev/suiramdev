@@ -63,7 +63,7 @@ const route = useRoute();
 
 const { data: page } = await useAsyncData(
   "post",
-  queryContent(route.path).findOne
+  queryContent(route.path).findOne,
 );
 
 useSeoMeta({

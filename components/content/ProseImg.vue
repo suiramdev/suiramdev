@@ -39,7 +39,7 @@ const props = defineProps({
 const refinedSrc = computed(() => {
   if (props.src?.startsWith("/") && !props.src.startsWith("//")) {
     const _base = withLeadingSlash(
-      withTrailingSlash(useRuntimeConfig().app.baseURL)
+      withTrailingSlash(useRuntimeConfig().app.baseURL),
     );
     if (_base !== "/" && !props.src.startsWith(_base)) {
       return joinURL(_base, props.src);
