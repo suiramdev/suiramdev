@@ -6,6 +6,7 @@ export default defineNuxtConfig({
       baseURL: "https://suiram.dev",
       posthogPublicKey: "",
       posthogHost: "https://app.posthog.com",
+      studioTokens: "",
     },
   },
   modules: [
