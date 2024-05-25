@@ -54,7 +54,7 @@ jobs:
           SSH_USER: ${{ secrets.SSH_USER }}
           WORK_DIR: ${{ secrets.WORK_DIR }}
         with:
-          host: ${{ secrets.SSH_HOST }}
+          host: vps.suiram.dev
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           envs: GITHUB_TOKEN,REGISTRY,SSH_USER,WORK_DIR
