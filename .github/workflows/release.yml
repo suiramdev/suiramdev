@@ -12,6 +12,7 @@ jobs:
   publish:
     name: Publish
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - name: Check out
         uses: actions/checkout@v4
@@ -36,25 +37,22 @@ jobs:
           push: true
           tags: ${{ env.REGISTRY }}/${{ github.repository }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: |
-            NUXT_PUBLIC_BASE_URL=${{ env.NUXT_PUBLIC_BASE_URL }}
-            NUXT_PUBLIC_POSTHOG_PUBLIC_KEY=${{ env.NUXT_PUBLIC_POSTHOG_PUBLIC_KEY }}
-            NUXT_PUBLIC_STUDIO_TOKENS=${{ env.NUXT_PUBLIC_STUDIO_TOKENS }}
 
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
+    environment: production
     needs: publish
     steps:
       - name: Pull and up
         uses: appleboy/ssh-action@v1.0.3
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ github.token }}
           REGISTRY: ${{ secrets.REGISTRY }}
           SSH_USER: ${{ secrets.SSH_USER }}
           WORK_DIR: ${{ secrets.WORK_DIR }}
         with:
-          host: vps.suiram.dev
+          host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           envs: GITHUB_TOKEN,REGISTRY,SSH_USER,WORK_DIR
