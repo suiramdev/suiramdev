@@ -8,7 +8,7 @@ const props = withDefaults(
   {
     class: undefined,
     as: "a",
-  },
+  }
 );
 </script>
 
