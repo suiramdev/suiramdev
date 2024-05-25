@@ -47,13 +47,18 @@ jobs:
     needs: publish
     steps:
       - name: Pull and up
-        uses: appleboy/ssh-action@v0.1.5
+        uses: appleboy/ssh-action@v1.0.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REGISTRY: ${{ secrets.REGISTRY }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          WORK_DIR: ${{ secrets.WORK_DIR }}
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 22
+          envs: GITHUB_TOKEN,REGISTRY,SSH_USER,WORK_DIR
           script: |
-            echo "${{ secrets.GITHUB_TOKEN }}" | docker login ${{ secrets.REGISTRY }} -u "${{ github.actor }}" --password-stdin
-            cd ${{ secrets.WORK_DIR }}
+            echo "$GITHUB_TOKEN" | docker login $REGISTRY -u "$SSH_USER" --password-stdin
+            cd $WORK_DIR
             docker-compose pull && docker-compose up -d
