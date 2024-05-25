@@ -9,11 +9,14 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "prepare": "husky",
-    "commitlint": "commitlint"
+    "commitlint": "commitlint",
+    "eslint": "eslint .",
+    "prettier": "prettier --check ."
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
-      "eslint ."
+      "eslint",
+      "prettier --check"
     ]
   },
   "devDependencies": {
