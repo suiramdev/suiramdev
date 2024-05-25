@@ -18,7 +18,7 @@ jobs:
         uses: ./.github/workflows/composite-actions/install
 
       - name: Run ESLint check
-        run: pnpm eslint
+        run: pnpx eslint --check .
 
   prettier:
     name: Prettier
@@ -31,4 +31,4 @@ jobs:
         uses: ./.github/workflows/composite-actions/install
 
       - name: Run Prettier check
-        run: pnpm prettier
+        run: pnpx prettier --check .

@@ -10,9 +10,7 @@
     "postinstall": "nuxt prepare",
     "prepare": "husky",
     "commitlint": "commitlint",
-    "commit": "git-cz",
-    "eslint": "eslint .",
-    "prettier": "prettier --check ."
+    "commit": "git-cz"
   },
   "config": {
     "commitizen": {
