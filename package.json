@@ -10,8 +10,14 @@
     "postinstall": "nuxt prepare",
     "prepare": "husky",
     "commitlint": "commitlint",
+    "commit": "git-cz",
     "eslint": "eslint .",
     "prettier": "prettier --check ."
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
@@ -22,14 +28,17 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/cz-commitlint": "^19.2.0",
     "@eslint/eslintrc": "^3.1.0",
     "@nuxt/eslint": "^0.3.13",
     "@nuxt/image": "^1.7.0",
     "@nuxthq/studio": "^1.1.0",
     "@nuxtjs/color-mode": "^3.4.1",
     "@nuxtjs/tailwindcss": "^6.12.0",
+    "commitizen": "^4.3.0",
     "eslint": "^9.3.0",
     "husky": "^9.0.11",
+    "inquirer": "9",
     "lint-staged": "^15.2.4",
     "nuxt": "^3.11.2",
     "nuxt-icon": "^0.6.10",
