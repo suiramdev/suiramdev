@@ -26,7 +26,7 @@ function Index() {
           skills.
         </p>
         <div className="flex gap-4">
-          <a href="tel:+3369663375">
+          <a href="https://calcom.suiram.dev/suiramdev/30min" target="_blank">
             <Button className="w-fit" size="lg">
               <span>book a call</span>
             </Button>
