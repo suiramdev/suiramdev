@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { ExternalLinkIcon } from "lucide-react";
 import { motion } from "framer-motion";
+import ReactMarkdown from "react-markdown";
 
 interface Media {
   type: "video" | "image";
@@ -26,7 +27,7 @@ export function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
-      className="grid w-full grid-cols-2 space-y-12"
+      className="grid w-full space-y-12 sm:grid-cols-2"
     >
       <div>
         <a href={link} target="_blank" rel="noopener noreferrer">
@@ -37,7 +38,23 @@ export function ProjectCard({
         </a>
       </div>
       <div className="flex flex-col gap-8">
-        <span className="text-muted-foreground text-sm">{description}</span>
+        <ReactMarkdown
+          className="text-muted-foreground text-sm"
+          components={{
+            a: ({ children, href }) => (
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-300"
+              >
+                {children}
+              </a>
+            ),
+          }}
+        >
+          {description}
+        </ReactMarkdown>
         <div
           className={cn("grid grid-cols-1", {
             "grid-cols-2": medias.length === 2,

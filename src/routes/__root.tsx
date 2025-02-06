@@ -6,7 +6,7 @@ export const Route = createRootRoute({
   component: () => (
     <>
       <div className="pointer-events-none fixed h-full w-full bg-[url('/noise.png')] bg-repeat opacity-[0.08%]" />
-      <main className="w-full px-10 py-10 md:px-20 md:py-20 lg:px-40">
+      <main className="w-full px-4 py-10 sm:px-10 md:px-20 md:py-20 lg:px-40">
         <Header />
         <Outlet />
         <TanStackRouterDevtools />
