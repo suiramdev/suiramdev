@@ -5,7 +5,7 @@ export function ProjectList() {
     <div className="space-y-12">
       <ProjectCard
         title="genial"
-        description="i participated in the sia partners hackathon, where we won first place for the legal tech use-case. built in partnership with aws and mistral ai, it automates the extraction of key information from commercial leases into structured audit reports - saving lawyers countless manual hours. the project will be implemented with the client, gide law firm."
+        description="built an ai solution to automatically analyze commercial leases and generate audit reports for the law firm [Gide](https://www.gide.com/). leveraging [AWS](https://aws.amazon.com/) and [Mistral AI](https://mistral.ai/) to win sia partners' h-genai hackathon legal tech challenge."
         medias={[
           {
             type: "video",
@@ -15,13 +15,13 @@ export function ProjectList() {
       />
       <ProjectCard
         title="spotify blind test"
-        description="a blind test game that leverages the spotify api to create music quizzes from their vast library of songs. players have to guess the song or artist being played."
+        description="a multiplayer blind test game built that leverages the spotify web api to create interactive music quizzes. players can create custom rooms, compete in real-time, and guess songs from spotify's vast library."
         link="https://github.com/suiramdev/blindtest"
       />
       <ProjectCard
         title="ft_irc"
         link="https://github.com/suiramdev/42-ft_irc"
-        description="a simple irc server written in c, using the libft library."
+        description="an irc server implementation written in c that supports multiple client connections, channels, private messages, and basic irc commands. developed as part of the [42](https://42.fr/en/homepage/) school curriculum using a custom libft library for efficient memory and string handling."
       />
       <ProjectCard
         title="storedge"
@@ -31,7 +31,7 @@ export function ProjectList() {
       <ProjectCard
         title="minishell"
         link="https://github.com/suiramdev/42-minishell"
-        description="a bash-like shell written in c, using the libft library."
+        description="a bash-like shell written in c, implementing core features like pipes, redirections, environment variables, and built-in commands. developed as part of the [42](https://42.fr/en/homepage/) school curriculum using a custom libft library for memory management and string operations."
         medias={[
           {
             type: "video",

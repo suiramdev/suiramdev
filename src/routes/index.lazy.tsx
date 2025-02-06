@@ -25,7 +25,7 @@ function Index() {
           i&apos;m a quick learner and i&apos;m always looking to improve my
           skills.
         </p>
-        <div className="flex gap-4">
+        <div className="flex flex-wrap gap-4">
           <a href="https://calcom.suiram.dev/suiramdev/30min" target="_blank">
             <Button className="w-fit" size="lg">
               <span>book a call</span>
