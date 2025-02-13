@@ -11,7 +11,7 @@ function Index() {
     <main>
       <div className="mb-20 w-full max-w-2xl">
         <img
-          src="/suiramdev.webp"
+          src="/avatar.webp"
           alt="profile picture"
           className="bg-muted mb-8 h-24 w-24 border"
         />
