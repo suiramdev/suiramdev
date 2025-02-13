@@ -186,7 +186,7 @@
   }
 
   body {
-    @apply bg-background text-foreground overflow-x-clip;
+    @apply bg-background text-foreground overflow-x-clip lowercase;
   }
 }
 
