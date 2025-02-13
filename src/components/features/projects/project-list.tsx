@@ -39,6 +39,17 @@ export function ProjectList() {
           },
         ]}
       />
+      <ProjectCard
+        title="Eclipse"
+        link="https://stim85.itch.io/eclipse"
+        description="my second game jam entry, a puzzle game made in 48 hours for the [Game Factory Jam 2](https://itch.io/jam/games-factory-2)."
+        medias={[
+          {
+            type: "image",
+            src: "/images/eclipse.png",
+          },
+        ]}
+      />
     </div>
   );
 }
