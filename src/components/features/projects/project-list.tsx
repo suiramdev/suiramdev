@@ -4,6 +4,11 @@ export function ProjectList() {
   return (
     <div className="space-y-12">
       <ProjectCard
+        title="docwright"
+        link="https://github.com/suiramdev/docwright"
+        description="docwright is a library that generates ui documentation from playwright-style test scripts. it automates the process of documenting your application's user interface."
+      />
+      <ProjectCard
         title="genial"
         description="built an ai solution to automatically analyze commercial leases and generate audit reports for the law firm [Gide](https://www.gide.com/). leveraging [AWS](https://aws.amazon.com/) and [Mistral AI](https://mistral.ai/) to win sia partners' h-genai hackathon legal tech challenge."
         medias={[
