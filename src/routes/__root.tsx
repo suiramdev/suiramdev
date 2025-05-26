@@ -9,7 +9,7 @@ export const Route = createRootRoute({
       <main className="w-full px-4 py-10 sm:px-10 md:px-20 md:py-20 lg:px-40">
         <Header />
         <Outlet />
-        <TanStackRouterDevtools />
+        {process.env.NODE_ENV === "development" && <TanStackRouterDevtools />}
       </main>
     </>
   ),
